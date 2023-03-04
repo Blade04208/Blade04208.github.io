@@ -1,120 +1,243 @@
-body {
-  height: 100vh;
-  width: 100vw;
-  margin: 0px;
-  background-color: #1e1e1e;
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+  --white: white;
+  --black: black;
+  --menu-color: #b1ffe5;
+  --fixed-menu-color: aquamarine;
 }
 
-.rubik-font {
-  font-family: "Rubik", sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-main {
-  background-image: url("https://raw.githubusercontent.com/Blade04208/Blade04208.github.io/main/Assets%20(no%20touchy)/home-img.png");
-  background-position: center 0%;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  z-index: 2;
-  transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
+ul {
+  list-style: none;
 }
 
-body[data-nav="true"] > main {
-  transform: translateY(-50%);
-}
-
-nav {
-  height: 50vh;
-  width: 100%;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  z-index: 1;
-  overflow: hidden;
-}
-
-#nav-links {  
-  display: flex;
-  gap: clamp(1rem, 2vw, 2rem);
-  margin-top: clamp(2rem, 2vw, 3rem);
-  padding: 0rem clamp(1rem, 2vw, 2rem);
-  transform: translateY(70%) scale(0.9);
-  transition: transform 500ms cubic-bezier(.13,.53,.38,.97); 
-}
-
-body[data-nav="true"] > nav > #nav-links {
-  transform: translateY(0%) scale(1);
-}
-
-#nav-links > .nav-link {
-  text-decoration: none;
-}
-
-#nav-links > .nav-link > .nav-link-label {
-  color: white;
-  font-size: 1.25rem;
-  margin: 0rem;
-}
-
-#nav-links > .nav-link > .nav-link-image {
-  width: max(20vw, 400px);
-  aspect-ratio: 1.8 / 1;
-  border-radius: 0.5rem;
-  margin-top: 0.75rem;
-  object-fit: cover;
-}
-
-#nav-toggle {
-  height: 5rem;
-  width: 5rem;
-  position: fixed;
-  z-index: 3;
-  left: 50%;
-  bottom: 3rem;
-  transform: translateX(-50%);
-  background-color: rgb(170, 112, 181);
+button {
   border: none;
-  border-radius: 5rem;
-  outline: none;
-  box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 35%);
+  background: transparent;
   cursor: pointer;
-  transition: transform, background-color;
-  transition-timing-function: ease;
-  transition-duration: 400ms;
 }
 
-#nav-toggle:hover {
-  transform: translateX(-50%) scale(1.04);
+button:active {
+  color: var(--black);
 }
 
-#nav-toggle:active {
-  transform: translateX(-50%) scale(0.96);
+a {
+  text-decoration: none;
+  color: var(--black);
 }
 
-body[data-nav="true"] > #nav-toggle {
-  background-color: rgb(85, 130, 149);
+body {
+  font: normal 18px/1.5 "Ubuntu", sans-serif;
 }
 
-body:not([data-nav="true"]) > #nav-toggle:hover > .open {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+.no-transition * {
+  transition: none !important;
 }
 
-#nav-toggle > i {
+/* TOP BANNER RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.top-banner {
+  position: relative;
+  left: 150px;
+  display: flex;
+  width: calc(100% - 150px);
+  height: 100vh;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash.jpg)
+    no-repeat center / cover;
+}
+
+.top-banner-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  padding: 20px;
+  transition: all 0.7s;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.top-banner-overlay.is-moved {
+  transform: translateX(350px);
+}
+
+.top-banner-overlay.is-moved::before {
+  content: "";
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  color: rgb(246, 231, 224);
-  font-size: 1.75rem;
-  opacity: 0;
-  transition: transform, opacity;
-  transition-timing-function: ease;
-  transition-duration: 400ms;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 20px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, .75);
 }
 
-body[data-nav="true"] > #nav-toggle > .close {
+.top-banner-overlay p {
+  margin-top: 10px;
+}
+
+.top-nav li + li {
+  margin-top: 7px;
+}
+
+/* MENU WRAPPER RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.top-nav .menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 350px;
+  padding: 20px;
+  transform: translateX(-200px);
+  transition: transform 0.7s;
+  background: var(--menu-color);
+}
+
+.top-nav .menu-wrapper.is-opened {
+  transform: translateX(150px);
+}
+
+.top-nav .menu-wrapper .menu {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.top-nav .menu-wrapper.is-opened .menu {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  transition-delay: 0.6s;
+}
+
+.top-nav .menu-wrapper .menu a {
+  font-size: 1.2rem;
+}
+
+.top-nav .menu-wrapper .sub-menu {
+  padding: 10px 0 0 7px;
+}
+
+.top-nav .menu-wrapper .menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+}
+
+/* FIXED MENU RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.top-nav .fixed-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  padding: 20px;
+  background: var(--fixed-menu-color);
+}
+
+.top-nav .fixed-menu .menu-toggle {
+  font-size: 2rem;
+  text-align: left;
+  margin: 30px 0 auto;
+  width: 28px;
+}
+
+/* MQ STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 900px) {
+  body {
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  .top-banner {
+    top: 50px;
+    left: auto;
+    width: 100%;
+    height: calc(100vh - 50px);
+    transform: none;
+    align-items: center;
+  }
+
+  .top-banner-overlay {
+    position: relative; /*2*/
+    left: 0; /*2*/
+    max-width: 100%;
+  }
+
+  .top-banner-overlay.is-moved {
+    left: 100%; /*2*/
+    transform: none;
+  }
+
+  .top-nav .menu-wrapper {
+    width: 100%;
+    transform: translateX(-100%);
+    padding-top: 70px;
+  }
+
+  .top-nav .menu-wrapper.is-opened {
+    transform: none;
+  }
+
+  .top-nav .menu-wrapper .menu-close {
+    top: 70px;
+  }
+
+  .top-nav .fixed-menu {
+    bottom: auto;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+  }
+
+  .top-nav .fixed-menu .menu-toggle {
+    margin: 0;
+    order: 3;
+  }
+
+  .top-nav .socials {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .top-nav .socials li {
+    margin-right: 15px;
+  }
+
+  .top-nav .socials li + li {
+    margin-top: 0;
+  }
+}
+
+/* FOOTER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  z-index: 1;
+  font-size: 16px;
+  background: var(--white);
+}
+
+.page-footer a {
+  display: flex;
+  margin-left: 4px;
 }
