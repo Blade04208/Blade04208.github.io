@@ -5,48 +5,75 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="script.js"></script>
 </head>
 <main></main>
 
-<section class="top-banner">
-  <div class="top-banner-overlay">
-    <h1>I like stuff that Looks Good.</h1>
-    <p>While yes, this website isn't perfect (yet) it still looks good. and its mine. :) </p>
+<nav>
+  <span class="brand">
+    <a href="#home">B</a>
+  </span>
+  <div class="menu">
+    <a href="#home" class="active scroll-page"><i class="material-icons">home</i></a><br>
+    <a href="#about" class="scroll-page"><i class="material-icons">account_circle</i></a><br>
+    <a href="#projects" class="scroll-page"><i class="material-icons">settings</i></a><br>
   </div>
-</section>
-<nav class="top-nav">
-  <div class="menu-wrapper">
-    <ul class="menu">
-      <li>
-        <a href="">▶ Home</a>
-      </li>
-      <li>
-        <a href="">About</a>
-      </li>
-      <li>
-        <a href="">Stuff</a>
-      </li>
-      <li>
-        <a href="">Socials</a>
-      </li>
-    </ul>
-    <button class="menu-close" type="button" aria-label="close menu">✕</button>
-  </div>
-  <div class="fixed-menu">
-    <h2 class="logo">LOGO</h2>
-    <button class="menu-toggle" type="button" aria-label="toggle menu">☰</button>
-    <ul class="socials">
-      <li>
-        <a href="">Discord</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/Blade04208">Twitter</a>
-      </li>
-      <li>
-        <a href="">Youtube</a>
-      </li>
-    </ul>
+  <div class="social">
+    <a href="https://github.com/RidhoBeteer" target="_blank"><i class="devicon-github-plain"></i></a><br>
+    <a href="http://beteer.wpdevcloud.com" target="_blank"><i class="devicon-wordpress-plain"></i></a><br>
+    <a href="https://twitter.com/ridhobeteer" target="_blank"><i class="devicon-twitter-plain"></i></a><br>
+    <a href="https://www.facebook.com/ridho.beteer" target="_blank"><i class="devicon-facebook-plain"></i></a><br>
   </div>
 </nav>
-</html>
+<section id="home">
+  <div class="container">
+    <h1 class="welcome">Hello!<br>Name's Blade0.<br> I  make stuff that <span class="pink">looks</span> <span class="blue">good</span>. </h1>
+    <a href="#projects"><button class="scroll-page">My stuff</button></a>
+  </div>
+</section>
+<section id="about">
+  <div class="container">
+    <div class="text-container">
+      <h2 class="blue">About</h2>
+      <p>Hello! I'm Blade0, and like stuff that looks good. Like this Site.<br><br>I like to play games on my free time and learn new stuff</p>
+    </div>
+  </div>
+</section>
+<section id="skills">
+  <div class="container">
+    <div class="text-container">
+      <h2 class="pink">Stuff</h2>
+      <p>Not much here right now :(</p><br> 
+    </div>
+  </div>
+</section>
+
+
+<!--Waves Container-->
+<div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+</div>
+<!--Waves end-->
+
+</div>
+<!--Header ends-->
+
+<!--Content starts-->
+<div class="content flex">
+  <p>Blade0</p>
+  <p class="FactStart">FUN FACT:</p>
+  <p class="Fact">I forgot to code a fun fact system :)</p> 
+</div>
+<!--Content ends-->
