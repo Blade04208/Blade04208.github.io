@@ -1,34 +1,34 @@
-const body = document.body;
-const topNav = document.querySelector(".top-nav");
-const menuToggle = topNav.querySelector(".menu-toggle");
-const menuClose = topNav.querySelector(".menu-close");
-const menuWrapper = topNav.querySelector(".menu-wrapper");
-const topBannerOverlay = document.querySelector(".top-banner-overlay");
-const isOpenedClass = "is-opened";
-const isMovedClass = "is-moved";
-const noTransitionClass = "no-transition";
-let resize;
+$(function() {
+	$('.scroll-page').on('click', function() {
+		var offset = 0;
+		var speed = 800;
+		var target = $(this.hash);
 
-menuToggle.addEventListener("click", () => {
-  menuWrapper.classList.toggle(isOpenedClass);
-  topBannerOverlay.classList.toggle(isMovedClass);
+		$('nav .menu a').each(function() {
+			$(this).removeClass('active');
+		});
+
+		$(this).addClass('active');
+
+		$('html, body').animate({
+			scrollTop: target.offset().top - offset
+		}, speed, 'swing'); });
+
 });
 
-menuClose.addEventListener("click", () => {
-  menuWrapper.classList.remove(isOpenedClass);
-  topBannerOverlay.classList.remove(isMovedClass);
-});
+$(window).scroll(function(event) {
+	var scrollPos = $(document).scrollTop();
+	console.log(scrollPos);
+	$('nav .menu a').each(function() {
+		var curLink = $(this);
+		var refElement = $(curLink.attr('href'));
 
-document.addEventListener("keydown", (e) => {
-  if (e.key == "Escape" && menuWrapper.classList.contains(isOpenedClass)) {
-    menuClose.click();
-  }
-});
+		if (refElement.position().top <= scrollPos + 60) {
+			$('nav .menu a').removeClass('active');
+			curLink.addClass('active');
 
-window.addEventListener("resize", () => {
-  body.classList.add(noTransitionClass);
-  clearTimeout(resize);
-  resize = setTimeout(() => {
-    body.classList.remove(noTransitionClass);
-  }, 500);
+		} else {
+			curLink.removeClass('active');
+		}
+	});
 });
