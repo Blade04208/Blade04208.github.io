@@ -27,7 +27,7 @@ nav {
   display: block;
   width: 60px;
   height: 100vh;
-  background-color: #333;
+  background-color: rgba(0,0,0,0.5);
   text-align: center;
 }
 
@@ -35,7 +35,7 @@ nav .brand {
   font-size: 3rem;
   font-weight: 600;
   display: block;
-  background-color: #171717;
+  background-color: rgba(0,0,0,0.7);
 }
 
 nav .menu {
@@ -48,7 +48,7 @@ nav .menu a {
 }
 
 nav .menu a, nav .social a {
-  color: #999;
+  color: rgba(0,0,0,0.2);
   -webkit-transition: color 320ms ease-in;
   -moz-transition: color 320ms ease-in;
   -ms-transition: color 320ms ease-in;
@@ -57,7 +57,7 @@ nav .menu a, nav .social a {
 }
 
 nav .menu a:hover, nav .menu a.active, nav .social a:hover {
-  color: #64ffda;
+  color: rgba(0,0,0,0.5);
 }
 
 nav .social {
@@ -71,14 +71,6 @@ nav .social a {
 
 section {
   min-height: 100vh;
-}
-
-section:nth-child(odd) {
-  background-color: #373737;
-}
-
-section:nth-child(even) {
-  background-color: #444;
 }
 
 .container h2 {
