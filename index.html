@@ -5,75 +5,40 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="script.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|VT323" rel="stylesheet">
+	<script>document.documentElement.className = 'js';</script>
 </head>
 <main></main>
+	<body class="demo-11">
 
-<nav>
-  <span class="brand">
-    <a href="#home">B</a>
-  </span>
-  <div class="menu">
-    <a href="#home" class="active scroll-page"><i class="material-icons">home</i></a><br>
-    <a href="#about" class="scroll-page"><i class="material-icons">account_circle</i></a><br>
-    <a href="#projects" class="scroll-page"><i class="material-icons">settings</i></a><br>
-  </div>
-  <div class="social">
-    <a href="https://github.com/RidhoBeteer" target="_blank"><i class="devicon-github-plain"></i></a><br>
-    <a href="http://beteer.wpdevcloud.com" target="_blank"><i class="devicon-wordpress-plain"></i></a><br>
-    <a href="https://twitter.com/ridhobeteer" target="_blank"><i class="devicon-twitter-plain"></i></a><br>
-    <a href="https://www.facebook.com/ridho.beteer" target="_blank"><i class="devicon-facebook-plain"></i></a><br>
-  </div>
-</nav>
-<section id="home">
-  <div class="container">
-    <h1 class="welcome">Hello!<br>Name's Blade0.<br> I  make stuff that <span class="pink">looks</span> <span class="blue">good</span>. </h1>
-    <a href="#projects"><button class="scroll-page">My stuff</button></a>
-  </div>
-</section>
-<section id="about">
-  <div class="container">
-    <div class="text-container">
-      <h2 class="blue">About</h2>
-      <p>Hello! I'm Blade0, and like stuff that looks good. Like this Site.<br><br>I like to play games on my free time and learn new stuff</p>
-    </div>
-  </div>
-</section>
-<section id="skills">
-  <div class="container">
-    <div class="text-container">
-      <h2 class="pink">Stuff</h2>
-      <p>Not much here right now :(</p><br> 
-    </div>
-  </div>
-</section>
+		<div id="connecting-dots" class="connecting-dots">
+				<canvas id="canvas"></canvas>
+		</div>
 
+		<div class="search search--open">
 
-<!--Waves Container-->
-<div>
-<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-<defs>
-<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-</defs>
-<g class="parallax">
-<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-</g>
-</svg>
-</div>
-<!--Waves end-->
+			<div class="terminal">
+				<p class="terminal__line">Welcome:<span class="green"><</span><span class="green" id="ip"></span><span class="green">></span></p>
+				<p class="terminal__line">How's the weather in: <span class="country green"></span>?</p>
+				<p class="terminal__line">Panel interface completed.</p>
+				<p class="terminal__line">Navigation portals fetched:</p>
+				<p class="terminal__line"><a href="#">#home</a></p>
+				<p class="terminal__line"><a href="#">#blog</a></p>
+				<p class="terminal__line"><a href="#">#codelab</a></p>
+				<p class="terminal__line"><a href="#">#contact</a></p>
+				<p class="terminal__line"><a href="#">#gethacked</a></p>
+				<p class="terminal__line"><a href="#">#aboutme</a></p>
+				<p class="terminal__line"><a class="out" href="#">#_instagram</a></p>
+				<p class="terminal__line">Inject <a href="#">Help.md</a> to C:\Users\<span class="console"></span></p>
+				<p class="terminal__line">\\<span class="console"></span>\<a href="#">C:\Users\Public\Help.md</a> > In order to navigate click on the links above or type the section you would like to access e.g: "home"</p>
+			</div>
+			<form class="search__form" action="">
+					<input class="search__input" id="search__input" name="search" placeholder="Command Line" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ></input>
+			</form>
+		</div><!-- /search -->
 
-</div>
-<!--Header ends-->
-
-<!--Content starts-->
-<div class="content flex">
-  <p>Blade0</p>
-  <p class="FactStart">FUN FACT:</p>
-  <p class="Fact">I forgot to code a fun fact system :)</p> 
-</div>
-<!--Content ends-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/easing/EasePack.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
+		
