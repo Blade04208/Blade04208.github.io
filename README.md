@@ -1,5 +1,8 @@
-# Welcome to my stupid-ass site.
-<sup>~~And no, its not broken. it just needs adjusting~~ It is very broken and I dont want to adjust it.</sup>
+### Welcome to my stupid-ass site.
+
  
- 
+ # ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️UNDER CONTSTRUCTION ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+![ClipWindowsGIF](https://user-images.githubusercontent.com/74104258/227718244-b49800af-88d4-4337-8920-cf422802eb86.gif)
+
+
 This site was built using [GitHub Pages](https://pages.github.com/), because its free. :trollface:
