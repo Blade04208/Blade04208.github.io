@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <script>
+        async function loadPosts() {
+            const repo = "blade04208/blade04208.github.io";
+            const response = await fetch(`https://api.github.com/repos/${repo}/contents/blog`);
+            const files = await response.json();
+            const list = document.getElementById("post-list");
+
+            list.innerHTML = ""; // Clear existing content
+            files.forEach(file => {
+                if (file.name.endsWith(".md")) {
+                    const postName = file.name.replace(".md", "").replace(/-/g, " ");
+                    const li = document.createElement("li");
+                    li.innerHTML = `<a href="post.html?post=${file.name.replace('.md', '')}">${postName}</a>`;
+                    list.appendChild(li);
+                }
+            });
+        }
+        window.onload = loadPosts;
+    </script>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <h1>My Blog</h1>
+    <ul id="post-list">Loading...</ul>
+</body>
+</html>

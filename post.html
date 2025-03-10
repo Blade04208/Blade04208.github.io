@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="./src/style.css">
+    <script>
+        async function loadMarkdown() {
+            const params = new URLSearchParams(window.location.search);
+            const post = params.get("post");
+
+            if (!post) {
+                document.getElementById("content").innerHTML = "<p>No post specified!</p>";
+                return;
+            }
+
+            const response = await fetch(`blog/${post}.md`);
+            if (!response.ok) {
+                document.getElementById("content").innerHTML = "<p>Post not found!</p>";
+                return;
+            }
+
+            const markdown = await response.text();
+            document.getElementById("content").innerHTML = marked.parse(markdown);
+            document.getElementById("post-title").innerText = post.replace("-", " ");
+        }
+
+        window.onload = loadMarkdown;
+    </script>
+</head>
+<body>
+    <h1 id="post-title">Loading...</h1>
+    <div id="content">Loading...</div>
+</body>
+</html>

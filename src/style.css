@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
+
+@font-face {
+    font-family: 'NerdFontsSymbols Nerd Font';
+    src: url("https://www.nerdfonts.com/assets/fonts/Symbols-2048-em Nerd Font Complete v233.woff2") format("woff2") !important;
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    color: #fff;
+}
+
+body {
+    font-family: "Atkinson Hyperlegible Next", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: hsla(278, 56%, 9%, 1);
+    background-image:
+        radial-gradient(at 64% 11%, hsla(213, 68%, 12%, 0.98) 0px, transparent 50%),
+        radial-gradient(at 62% 94%, hsla(292, 67%, 10%, 1) 0px, transparent 50%),
+        radial-gradient(at 94% 58%, hsla(280, 77%, 11%, 1) 0px, transparent 50%),
+        radial-gradient(at 89% 60%, hsla(291, 74%, 13%, 1) 0px, transparent 50%),
+        radial-gradient(at 19% 13%, hsla(231, 75%, 9%, 1) 0px, transparent 50%),
+        radial-gradient(at 6% 28%, hsla(331, 77%, 8%, 1) 0px, transparent 50%),
+        radial-gradient(at 76% 11%, hsla(229, 77%, 8%, 1) 0px, transparent 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+.ahc {
+    font-family: "Atkinson Hyperlegible Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+section {
+    padding: 2rem;
+    margin: 0 auto;
+    transition: box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+    width: 700px;
+    border-bottom: rgba(255, 255, 255, 0.25) 1px solid;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+h1,
+h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    text-align: center;
+    color: #ffffff;
+}
+
+.pfp {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+a {
+    color: #c5e2ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #75acff;
+    }
+}
+
+button {
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        background-color: #ff6347;
+        transform: scale(1.05);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+    }
+
+}
+
+.bi-l {
+    font-size: 1.5rem;
+}
+
+.left p {
+    text-align: left;
+    justify-content: left;
+    align-content: left;
+}
+
+.indent {
+    margin-left: 1em;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    padding: 1rem;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    color: #ffffff;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        li {
+            position: relative;
+            width: 12px;
+            height: 20px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            transition: width 0.3s ease;
+            padding: 4px;
+
+            &:hover {
+                width: 100%;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                display: block;
+                padding: 6px;
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                transition: width 0.3s ease;
+                padding: 4px;
+                gap: 8px;
+                scroll-behavior: smooth;
+
+                &::before {
+                    content: "";
+                    min-width: 4px;
+                    min-height: 4px;
+                    width: 4px;
+                    height: 4px;
+                    background-color: #fff;
+                    margin-left: 0px 8px;
+                    border-radius: 4px;
+                    display: block;
+                    opacity: 1;
+                }
+
+                &:hover::before {
+                    width: 40px;
+                }
+            }
+        }
+    }
+}
+
+.full {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    top: -56px;
+}
+
+#setup {
+    display: flex;
+    flex-direction: row;
+
+    h2 {
+        text-align: left;
+        width: 100%
+    }
+
+    div {
+        padding: 5px;
+        width: 100%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
+
+@font-face {
+    font-family: 'NerdFontsSymbols Nerd Font';
+    src: url("www.nerdfonts.com/assets/fonts/Symbols-2048-em Nerd Font Complete v233.woff2") format("woff2") !important;
+    font-weight: normal;
+    font-style: normal
+}
+
+html {
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Atkinson Hyperlegible Next", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: hsla(278, 56%, 9%, 1);
+    background-image:
+        radial-gradient(at 64% 11%, hsla(213, 68%, 12%, 0.98) 0px, transparent 50%),
+        radial-gradient(at 62% 94%, hsla(292, 67%, 10%, 1) 0px, transparent 50%),
+        radial-gradient(at 94% 58%, hsla(280, 77%, 11%, 1) 0px, transparent 50%),
+        radial-gradient(at 89% 60%, hsla(291, 74%, 13%, 1) 0px, transparent 50%),
+        radial-gradient(at 19% 13%, hsla(231, 75%, 9%, 1) 0px, transparent 50%),
+        radial-gradient(at 6% 28%, hsla(331, 77%, 8%, 1) 0px, transparent 50%),
+        radial-gradient(at 76% 11%, hsla(229, 77%, 8%, 1) 0px, transparent 50%);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+.ahc {
+    font-family: "Atkinson Hyperlegible Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+section {
+    padding: 2rem;
+    margin: 0 auto;
+    transition: box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+    width: 700px;
+    border-bottom: rgba(255, 255, 255, 0.25) 1px solid;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+h1,
+h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    text-align: center;
+    color: #ffffff;
+}
+
+.pfp {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+a {
+    color: #c5e2ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #75acff;
+    }
+}
+
+button {
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        background-color: #ff6347;
+        transform: scale(1.05);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+    }
+
+}
+
+.bi-l {
+    font-size: 1.5rem;
+}
+
+.left p {
+    text-align: left;
+    justify-content: left;
+    align-content: left;
+}
+
+.indent {
+    margin-left: 1em;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    padding: 1rem;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        li {
+            position: relative;
+            width: 12px;
+            height: 20px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            transition: width 0.3s ease;
+            padding: 4px;
+
+            &:hover {
+                width: 100%;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                display: block;
+                padding: 6px;
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                transition: width 0.3s ease;
+                padding: 4px;
+                gap: 8px;
+
+                &::before {
+                    content: "";
+                    min-width: 4px;
+                    min-height: 4px;
+                    width: 4px;
+                    height: 4px;
+                    background-color: #fff;
+                    margin-left: 0px 8px;
+                    border-radius: 4px;
+                    display: block;
+                    opacity: 1;
+                }
+
+                &:hover::before {
+                    width: 40px;
+                }
+            }
+        }
+    }
+}
+
+.full {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    top: -56px;
+}
+
+#setup {
+    display: flex;
+    flex-direction: row;
+
+    h2 {
+        text-align: left;
+        width: 100%
+    }
+
+    div {
+        padding: 5px;
+        width: 100%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(197, 226, 255, 0.1);
+    border-radius: 10px;
+    border: 2px solid hsla(278, 56%, 9%, 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(117, 172, 255, 0.25);
+}
