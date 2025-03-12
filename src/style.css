@@ -126,10 +126,14 @@ button {
     font-size: 1.5rem;
 }
 
-.left p {
-    text-align: left;
-    justify-content: left;
-    align-content: left;
+.left p,
+.left h1,
+.left h2,
+.left {
+    display: flex;
+    text-align: left!important;
+    justify-content: left!important;
+    align-content: left!important;
 }
 
 .indent {
@@ -508,4 +512,10 @@ nav {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(117, 172, 255, 0.25);
+}
+
+#content, #post-title {
+    max-width: 1000px!important;
+    min-width: 500px!important;
+    width: 25%!important;
 }

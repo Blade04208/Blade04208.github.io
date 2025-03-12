@@ -22,8 +22,31 @@
                 return;
             }
 
-            const markdown = await response.text();
-            document.getElementById("content").innerHTML = marked.parse(markdown);
+            let markdown = await response.text();
+            let html = marked.parse(markdown);
+
+            // Generate Table of Contents
+            let tempDiv = document.createElement("div");
+            tempDiv.innerHTML = html;
+            let headers = tempDiv.querySelectorAll("h1, h2, h3, h4, h5, h6");
+            let tocHTML = "<ul>";
+
+            headers.forEach((header, index) => {
+                let id = `header-${index}`;
+                header.id = id; // Set ID for jump links
+                tocHTML += `<li><a href="#${id}">${header.innerText}</a></li>`;
+            });
+
+            tocHTML += "</ul>";
+
+            // Add ToC if there are headers
+            if (headers.length > 0) {
+                document.getElementById("toc").innerHTML = tocHTML;
+            } else {
+                document.getElementById("toc-container").style.display = "none"; // Hide ToC if empty
+            }
+
+            document.getElementById("content").innerHTML = tempDiv.innerHTML;
             document.getElementById("post-title").innerText = post.replace("-", " ");
         }
 
@@ -32,6 +55,13 @@
 </head>
 <body>
     <h1 id="post-title">Loading...</h1>
+
+    <!-- Table of Contents -->
+    <div id="toc-container">
+        <nav></nav>
+    </div>
+
+    <!-- Markdown Content -->
     <div id="content">Loading...</div>
 </body>
 </html>
