@@ -131,9 +131,9 @@ button {
 .left h2,
 .left {
     display: flex;
-    text-align: left!important;
-    justify-content: left!important;
-    align-content: left!important;
+    text-align: left !important;
+    justify-content: left !important;
+    align-content: left !important;
 }
 
 .indent {
@@ -514,8 +514,23 @@ nav {
     background-color: rgba(117, 172, 255, 0.25);
 }
 
-#content, #post-title {
-    max-width: 1000px!important;
-    min-width: 500px!important;
-    width: 25%!important;
+#content,
+#post-title {
+    max-width: 1000px !important;
+    min-width: 500px !important;
+    width: 25% !important;
+}
+
+.load {
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 }

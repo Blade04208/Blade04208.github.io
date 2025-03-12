@@ -25,7 +25,6 @@
             let markdown = await response.text();
             let html = marked.parse(markdown);
 
-            // Generate Table of Contents
             let tempDiv = document.createElement("div");
             tempDiv.innerHTML = html;
             let headers = tempDiv.querySelectorAll("h1, h2, h3, h4, h5, h6");
@@ -33,17 +32,16 @@
 
             headers.forEach((header, index) => {
                 let id = `header-${index}`;
-                header.id = id; // Set ID for jump links
+                header.id = id; // would prefer to use the name of header, but it's not guaranteed to be unique
                 tocHTML += `<li><a href="#${id}">${header.innerText}</a></li>`;
             });
 
             tocHTML += "</ul>";
 
-            // Add ToC if there are headers
             if (headers.length > 0) {
                 document.getElementById("toc").innerHTML = tocHTML;
             } else {
-                document.getElementById("toc-container").style.display = "none"; // Hide ToC if empty
+                document.getElementById("toc-container").style.display = "none";
             }
 
             document.getElementById("content").innerHTML = tempDiv.innerHTML;
@@ -55,12 +53,9 @@
 </head>
 <body>
     <h1 id="post-title">Loading...</h1>
-
-    <!-- Table of Contents -->
     <div id="toc-container">
         <nav>
-            <h3>Table of Contents</h3>
-            <div id="toc">Loading...</div>
+            <div id="toc"><i class="bi bi-arrow-clockwise load"></i></div>
         </nav>
     </div>
 
