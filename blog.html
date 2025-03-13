@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <title>Blog</title>
+    <link rel="stylesheet" href="./src/style.css">
     <script>
         async function loadPosts() {
             const repo = "blade04208/blade04208.github.io";
@@ -11,22 +12,36 @@
             const files = await response.json();
             const list = document.getElementById("post-list");
 
-            list.innerHTML = ""; // Clear existing content
+            list.innerHTML = "";
             files.forEach(file => {
                 if (file.name.endsWith(".md")) {
                     const postName = file.name.replace(".md", "").replace(/-/g, " ");
-                    const li = document.createElement("li");
-                    li.innerHTML = `<a href="post.html?post=${file.name.replace('.md', '')}">${postName}</a>`;
-                    list.appendChild(li);
+                    
+                    const postCard = document.createElement("div");
+                    postCard.classList.add("post-card");
+
+                    const title = document.createElement("div");
+                    title.classList.add("post-title");
+                    title.innerText = postName;
+
+                    const button = document.createElement("a");
+                    button.classList.add("read-more");
+                    button.href = `post.html?post=${file.name.replace('.md', '')}`;
+                    button.innerText = "Read More";
+
+                    postCard.appendChild(title);
+                    postCard.appendChild(button);
+                    list.appendChild(postCard);
                 }
             });
         }
         window.onload = loadPosts;
     </script>
-    <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
-    <h1>My Blog</h1>
-    <ul id="post-list">Loading...</ul>
+    <div class="blog-container">
+        <h1>Blog</h1>
+        <div id="post-list">you have tesconet <br> wait for your tesconet to subside</div>
+    </div>
 </body>
 </html>
