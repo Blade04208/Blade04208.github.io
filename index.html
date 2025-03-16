@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="./src/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://www.nerdfonts.com/assets/css/webfont.css">
+    <script src="./src/script.js"></script>
 </head>
- <!-- 
+<!-- 
                               __
                      /\    .-" /
                     /  ; .'  .' 
@@ -30,6 +31,7 @@
      QUICK BOYS RUN
 
      -->
+
 <body>
     <nav>
         <ul>
@@ -39,28 +41,64 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    <header>
+        <h3>Blade0</h3>
+        <tabs>
+            <a class="button selected" href="./index.html"><i class="bi-m bi-house"></i>Home</a>
+            <a class="button" href="./blog.html"><i class="bi-m bi-journal-text"></i>Blog</a>
+        </tabs>
+    </header>
     <div class="container">
         <section id="about" class="full">
+            <svg class="jump" width="100%" height="100%" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="blur-filter">
+                        <feGaussianBlur stdDeviation="20" />
+                    </filter>
+                    <mask id="blurred-mask">
+                        <rect width="1920" height="1080" fill="white" filter="url(#blur-filter)" />
+                    </mask>
+                </defs>
+                <g mask="url(#blurred-mask)">
+                    <path opacity="0.1" d="M313 100L-597 1614H1223L313 100Z" stroke="white" stroke-width="5" />
+                    <path opacity="0.1" d="M809 368L-101 1882H1719L809 368Z" stroke="white" stroke-width="5" />
+                    <path opacity="0.25" d="M2267 790L3177 -724H1357L2267 790Z" stroke="white" stroke-width="5" />
+                    <path opacity="0.25" d="M1771 522L2681 -992H861L1771 522Z" stroke="white" stroke-width="5" />
+                    <path opacity="0.25" d="M1161 -858L2071 656H251L1161 -858Z" stroke="white" stroke-width="5" />
+                    <path opacity="0.25" d="M232 484L1142 -1030H-678L232 484Z" stroke="white" stroke-width="5" />
+                    <path opacity="0.5" d="M1534 323L624 1837H2444L1534 323Z" stroke="white" stroke-width="5" />
+                    <path opacity="0.5" d="M27 -80L-883 1434H937L27 -80Z" stroke="white" stroke-width="5" />
+                    <path opacity="0.5" d="M937 587L186 1821H1688L937 587Z" stroke="white" stroke-width="5" />
+                    <path opacity="0.5" d="M1161 802L491 -312H1831L1161 802Z" stroke="white" stroke-width="5" />
+                    <path opacity="0.5" d="M1807 217L897 1731H2717L1807 217Z" stroke="white" stroke-width="5" />
+                </g>
+            </svg>
+            </svg>
             <h2>Hello!</h2>
             <img class=pfp src="./src/pfp.png" alt="Profile Picture" style="width:150px;height:150px;">
-            <p>My name's Blade0. I am a designer and coder. <br> I disable rabbits. <br> You don't need to know what that means.</p>
+            <p>My name's Blade0. I am a designer and coder. <br> I disable rabbits. <br> You don't need to know what
+                that means.</p>
         </section>
         <section id="setup">
             <h2>Setup</h2>
             <div class="left">
-                <p><i class="bi bi-phone"></i>  Redmi Note 10 5G</p>
-                <p><i class="bi bi-laptop"></i>  Samsung Galaxy Book3 <br> <div class="indent"><i class="nf nf-md-arch"></i> Arch Linux</div></p>
-                <p><i class="bi bi-nintendo-switch"></i>  Nintendo Switch</p>
-                <p><i class="bi bi-dpad"></i>  New Nintendo 2DS XL</p>
-                <p><i class="bi bi-controller"></i>  8BitDo Ultimate Bluetooth Controller</p>
+                <p><i class="bi bi-phone"></i> Redmi Note 10 5G</p>
+                <p><i class="bi bi-laptop"></i> Samsung Galaxy Book3 <br>
+                <div class="indent"><i class="nf nf-md-arch"></i> Arch Linux</div>
+                </p>
+                <p><i class="bi bi-nintendo-switch"></i> Nintendo Switch</p>
+                <p><i class="bi bi-dpad"></i> New Nintendo 2DS XL</p>
+                <p><i class="bi bi-controller"></i> 8BitDo Ultimate Bluetooth Controller</p>
             </div>
         </section>
         <section id="projects" class="left">
             <h2>Projects</h2>
             <div class="project">
                 <h3>Amity</h3>
-                <p>Amity is an open-source and decentralized chat app, allowing for anyone to freely connect with others.</p>
-                <a href="https://github.com/negative-zero-inft/amity-webgui" target="_blank"><button>View on GitHub</button></a>
+                <p>Amity is an open-source and decentralized chat app, allowing for anyone to freely connect with
+                    others.</p>
+                <a href="https://github.com/negative-zero-inft/amity-webgui" target="_blank"><button>View on
+                        GitHub</button></a>
             </div>
             <div class="project">
                 <h3>DDEX4</h3>

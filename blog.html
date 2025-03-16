@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="./src/script.js"></script>
     <script>
         async function loadPosts() {
             const repo = "blade04208/blade04208.github.io";
@@ -38,10 +40,17 @@
         window.onload = loadPosts;
     </script>
 </head>
-<body>
+<body class="headerpadding">
+    <header>
+        <h3>Blade0</h3>
+        <tabs>
+            <a class="button" href="./index.html"><i class="bi-m bi-house"></i>Home</a>
+            <a class="button selected" href="./blog.html"><i class="bi-m bi-journal-text"></i>Blog</a>
+        </tabs>
+    </header>
     <div class="blog-container">
         <h1>Blog</h1>
-        <div id="post-list">you have tesconet <br> wait for your tesconet to subside</div>
+        <div id="post-list"><i class="bi bi-arrow-clockwise load"></i> <br> you have tesconet <br> wait for your tesconet to subside</div>
     </div>
 </body>
 </html>
