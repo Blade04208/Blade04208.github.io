@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
 
 @font-face {
@@ -7,387 +8,616 @@
     font-style: normal;
 }
 
-html {
+z html {
     color: #fff;
     scroll-behavior: smooth;
+}
+
+:root {
+    /* Color styles */
+    --material-theme--white: #FFFFFF;
+    --material-theme--black: #000000;
+    --material-theme--sys--light--primary: #425E91;
+    --material-theme--sys--light--surface-tint: #425E91;
+    --material-theme--sys--light--on-primary: #FFFFFF;
+    --material-theme--sys--light--primary-container: #D7E2FF;
+    --material-theme--sys--light--on-primary-container: #294677;
+    --material-theme--sys--light--secondary: #565E71;
+    --material-theme--sys--light--on-secondary: #FFFFFF;
+    --material-theme--sys--light--secondary-container: #DAE2F9;
+    --material-theme--sys--light--on-secondary-container: #3F4759;
+    --material-theme--sys--light--tertiary: #705574;
+    --material-theme--sys--light--on-tertiary: #FFFFFF;
+    --material-theme--sys--light--tertiary-container: #FBD7FC;
+    --material-theme--sys--light--on-tertiary-container: #573E5B;
+    --material-theme--sys--light--error: #BA1A1A;
+    --material-theme--sys--light--on-error: #FFFFFF;
+    --material-theme--sys--light--error-container: #FFDAD6;
+    --material-theme--sys--light--on-error-container: #93000A;
+    --material-theme--sys--light--background: #F9F9FF;
+    --material-theme--sys--light--on-background: #1A1C20;
+    --material-theme--sys--light--surface: #F9F9FF;
+    --material-theme--sys--light--on-surface: #1A1C20;
+    --material-theme--sys--light--surface-variant: #E0E2EC;
+    --material-theme--sys--light--on-surface-variant: #44474E;
+    --material-theme--sys--light--outline: #74777F;
+    --material-theme--sys--light--outline-variant: #C4C6D0;
+    --material-theme--sys--light--shadow: #000000;
+    --material-theme--sys--light--scrim: #000000;
+    --material-theme--sys--light--inverse-surface: #2E3036;
+    --material-theme--sys--light--inverse-on-surface: #F0F0F7;
+    --material-theme--sys--light--inverse-primary: #ACC7FF;
+    --material-theme--sys--light--primary-fixed: #D7E2FF;
+    --material-theme--sys--light--on-primary-fixed: #001A40;
+    --material-theme--sys--light--primary-fixed-dim: #ACC7FF;
+    --material-theme--sys--light--on-primary-fixed-variant: #294677;
+    --material-theme--sys--light--secondary-fixed: #DAE2F9;
+    --material-theme--sys--light--on-secondary-fixed: #131C2C;
+    --material-theme--sys--light--secondary-fixed-dim: #BEC6DC;
+    --material-theme--sys--light--on-secondary-fixed-variant: #3F4759;
+    --material-theme--sys--light--tertiary-fixed: #FBD7FC;
+    --material-theme--sys--light--on-tertiary-fixed: #29132E;
+    --material-theme--sys--light--tertiary-fixed-dim: #DDBCE0;
+    --material-theme--sys--light--on-tertiary-fixed-variant: #573E5B;
+    --material-theme--sys--light--surface-dim: #D9D9E0;
+    --material-theme--sys--light--surface-bright: #F9F9FF;
+    --material-theme--sys--light--surface-container-lowest: #FFFFFF;
+    --material-theme--sys--light--surface-container-low: #F3F3FA;
+    --material-theme--sys--light--surface-container: #EDEDF4;
+    --material-theme--sys--light--surface-container-high: #E8E7EE;
+    --material-theme--sys--light--surface-container-highest: #E2E2E9;
+    --material-theme--sys--dark--primary: #ACC7FF;
+    --material-theme--sys--dark--surface-tint: #ACC7FF;
+    --material-theme--sys--dark--on-primary: #0E2F60;
+    --material-theme--sys--dark--primary-container: #294677;
+    --material-theme--sys--dark--on-primary-container: #D7E2FF;
+    --material-theme--sys--dark--secondary: #BEC6DC;
+    --material-theme--sys--dark--on-secondary: #283041;
+    --material-theme--sys--dark--secondary-container: #3F4759;
+    --material-theme--sys--dark--on-secondary-container: #DAE2F9;
+    --material-theme--sys--dark--tertiary: #DDBCE0;
+    --material-theme--sys--dark--on-tertiary: #3F2844;
+    --material-theme--sys--dark--tertiary-container: #573E5B;
+    --material-theme--sys--dark--on-tertiary-container: #FBD7FC;
+    --material-theme--sys--dark--error: #FFB4AB;
+    --material-theme--sys--dark--on-error: #690005;
+    --material-theme--sys--dark--error-container: #93000A;
+    --material-theme--sys--dark--on-error-container: #FFDAD6;
+    --material-theme--sys--dark--background: #111318;
+    --material-theme--sys--dark--on-background: #E2E2E9;
+    --material-theme--sys--dark--surface: #111318;
+    --material-theme--sys--dark--on-surface: #E2E2E9;
+    --material-theme--sys--dark--surface-variant: #44474E;
+    --material-theme--sys--dark--on-surface-variant: #C4C6D0;
+    --material-theme--sys--dark--outline: #8E9099;
+    --material-theme--sys--dark--outline-variant: #44474E;
+    --material-theme--sys--dark--shadow: #000000;
+    --material-theme--sys--dark--scrim: #000000;
+    --material-theme--sys--dark--inverse-surface: #E2E2E9;
+    --material-theme--sys--dark--inverse-on-surface: #2E3036;
+    --material-theme--sys--dark--inverse-primary: #425E91;
+    --material-theme--sys--dark--primary-fixed: #D7E2FF;
+    --material-theme--sys--dark--on-primary-fixed: #001A40;
+    --material-theme--sys--dark--primary-fixed-dim: #ACC7FF;
+    --material-theme--sys--dark--on-primary-fixed-variant: #294677;
+    --material-theme--sys--dark--secondary-fixed: #DAE2F9;
+    --material-theme--sys--dark--on-secondary-fixed: #131C2C;
+    --material-theme--sys--dark--secondary-fixed-dim: #BEC6DC;
+    --material-theme--sys--dark--on-secondary-fixed-variant: #3F4759;
+    --material-theme--sys--dark--tertiary-fixed: #FBD7FC;
+    --material-theme--sys--dark--on-tertiary-fixed: #29132E;
+    --material-theme--sys--dark--tertiary-fixed-dim: #DDBCE0;
+    --material-theme--sys--dark--on-tertiary-fixed-variant: #573E5B;
+    --material-theme--sys--dark--surface-dim: #111318;
+    --material-theme--sys--dark--surface-bright: #37393E;
+    --material-theme--sys--dark--surface-container-lowest: #0C0E13;
+    --material-theme--sys--dark--surface-container-low: #1A1C20;
+    --material-theme--sys--dark--surface-container: #1E2025;
+    --material-theme--sys--dark--surface-container-high: #282A2F;
+    --material-theme--sys--dark--surface-container-highest: #33353A;
+    --material-theme--sys--light-high-contrast--primary: #072B5B;
+    --material-theme--sys--light-high-contrast--surface-tint: #425E91;
+    --material-theme--sys--light-high-contrast--on-primary: #FFFFFF;
+    --material-theme--sys--light-high-contrast--primary-container: #2C497A;
+    --material-theme--sys--light-high-contrast--on-primary-container: #FFFFFF;
+    --material-theme--sys--light-high-contrast--secondary: #242C3D;
+    --material-theme--sys--light-high-contrast--on-secondary: #FFFFFF;
+    --material-theme--sys--light-high-contrast--secondary-container: #41495B;
+    --material-theme--sys--light-high-contrast--on-secondary-container: #FFFFFF;
+    --material-theme--sys--light-high-contrast--tertiary: #3B243F;
+    --material-theme--sys--light-high-contrast--on-tertiary: #FFFFFF;
+    --material-theme--sys--light-high-contrast--tertiary-container: #5A405E;
+    --material-theme--sys--light-high-contrast--on-tertiary-container: #FFFFFF;
+    --material-theme--sys--light-high-contrast--error: #600004;
+    --material-theme--sys--light-high-contrast--on-error: #FFFFFF;
+    --material-theme--sys--light-high-contrast--error-container: #98000A;
+    --material-theme--sys--light-high-contrast--on-error-container: #FFFFFF;
+    --material-theme--sys--light-high-contrast--background: #F9F9FF;
+    --material-theme--sys--light-high-contrast--on-background: #1A1C20;
+    --material-theme--sys--light-high-contrast--surface: #F9F9FF;
+    --material-theme--sys--light-high-contrast--on-surface: #000000;
+    --material-theme--sys--light-high-contrast--surface-variant: #E0E2EC;
+    --material-theme--sys--light-high-contrast--on-surface-variant: #000000;
+    --material-theme--sys--light-high-contrast--outline: #292C33;
+    --material-theme--sys--light-high-contrast--outline-variant: #464951;
+    --material-theme--sys--light-high-contrast--shadow: #000000;
+    --material-theme--sys--light-high-contrast--scrim: #000000;
+    --material-theme--sys--light-high-contrast--inverse-surface: #2E3036;
+    --material-theme--sys--light-high-contrast--inverse-on-surface: #FFFFFF;
+    --material-theme--sys--light-high-contrast--inverse-primary: #ACC7FF;
+    --material-theme--sys--light-high-contrast--primary-fixed: #2C497A;
+    --material-theme--sys--light-high-contrast--on-primary-fixed: #FFFFFF;
+    --material-theme--sys--light-high-contrast--primary-fixed-dim: #113262;
+    --material-theme--sys--light-high-contrast--on-primary-fixed-variant: #FFFFFF;
+    --material-theme--sys--light-high-contrast--secondary-fixed: #41495B;
+    --material-theme--sys--light-high-contrast--on-secondary-fixed: #FFFFFF;
+    --material-theme--sys--light-high-contrast--secondary-fixed-dim: #2A3344;
+    --material-theme--sys--light-high-contrast--on-secondary-fixed-variant: #FFFFFF;
+    --material-theme--sys--light-high-contrast--tertiary-fixed: #5A405E;
+    --material-theme--sys--light-high-contrast--on-tertiary-fixed: #FFFFFF;
+    --material-theme--sys--light-high-contrast--tertiary-fixed-dim: #422A46;
+    --material-theme--sys--light-high-contrast--on-tertiary-fixed-variant: #FFFFFF;
+    --material-theme--sys--light-high-contrast--surface-dim: #B8B8BF;
+    --material-theme--sys--light-high-contrast--surface-bright: #F9F9FF;
+    --material-theme--sys--light-high-contrast--surface-container-lowest: #FFFFFF;
+    --material-theme--sys--light-high-contrast--surface-container-low: #F0F0F7;
+    --material-theme--sys--light-high-contrast--surface-container: #E2E2E9;
+    --material-theme--sys--light-high-contrast--surface-container-high: #D4D4DB;
+    --material-theme--sys--light-high-contrast--surface-container-highest: #C6C6CD;
+    --material-theme--sys--dark-high-contrast--primary: #EBF0FF;
+    --material-theme--sys--dark-high-contrast--surface-tint: #ACC7FF;
+    --material-theme--sys--dark-high-contrast--on-primary: #000000;
+    --material-theme--sys--dark-high-contrast--primary-container: #A7C3FC;
+    --material-theme--sys--dark-high-contrast--on-primary-container: #000B21;
+    --material-theme--sys--dark-high-contrast--secondary: #EBF0FF;
+    --material-theme--sys--dark-high-contrast--on-secondary: #000000;
+    --material-theme--sys--dark-high-contrast--secondary-container: #BAC2D8;
+    --material-theme--sys--dark-high-contrast--on-secondary-container: #040B1A;
+    --material-theme--sys--dark-high-contrast--tertiary: #FFEAFD;
+    --material-theme--sys--dark-high-contrast--on-tertiary: #000000;
+    --material-theme--sys--dark-high-contrast--tertiary-container: #D9B8DC;
+    --material-theme--sys--dark-high-contrast--on-tertiary-container: #17031C;
+    --material-theme--sys--dark-high-contrast--error: #FFECE9;
+    --material-theme--sys--dark-high-contrast--on-error: #000000;
+    --material-theme--sys--dark-high-contrast--error-container: #FFAEA4;
+    --material-theme--sys--dark-high-contrast--on-error-container: #220001;
+    --material-theme--sys--dark-high-contrast--background: #111318;
+    --material-theme--sys--dark-high-contrast--on-background: #E2E2E9;
+    --material-theme--sys--dark-high-contrast--surface: #111318;
+    --material-theme--sys--dark-high-contrast--on-surface: #FFFFFF;
+    --material-theme--sys--dark-high-contrast--surface-variant: #44474E;
+    --material-theme--sys--dark-high-contrast--on-surface-variant: #FFFFFF;
+    --material-theme--sys--dark-high-contrast--outline: #EEEFF9;
+    --material-theme--sys--dark-high-contrast--outline-variant: #C0C2CC;
+    --material-theme--sys--dark-high-contrast--shadow: #000000;
+    --material-theme--sys--dark-high-contrast--scrim: #000000;
+    --material-theme--sys--dark-high-contrast--inverse-surface: #E2E2E9;
+    --material-theme--sys--dark-high-contrast--inverse-on-surface: #000000;
+    --material-theme--sys--dark-high-contrast--inverse-primary: #2B4779;
+    --material-theme--sys--dark-high-contrast--primary-fixed: #D7E2FF;
+    --material-theme--sys--dark-high-contrast--on-primary-fixed: #000000;
+    --material-theme--sys--dark-high-contrast--primary-fixed-dim: #ACC7FF;
+    --material-theme--sys--dark-high-contrast--on-primary-fixed-variant: #00102C;
+    --material-theme--sys--dark-high-contrast--secondary-fixed: #DAE2F9;
+    --material-theme--sys--dark-high-contrast--on-secondary-fixed: #000000;
+    --material-theme--sys--dark-high-contrast--secondary-fixed-dim: #BEC6DC;
+    --material-theme--sys--dark-high-contrast--on-secondary-fixed-variant: #081121;
+    --material-theme--sys--dark-high-contrast--tertiary-fixed: #FBD7FC;
+    --material-theme--sys--dark-high-contrast--on-tertiary-fixed: #000000;
+    --material-theme--sys--dark-high-contrast--tertiary-fixed-dim: #DDBCE0;
+    --material-theme--sys--dark-high-contrast--on-tertiary-fixed-variant: #1D0823;
+    --material-theme--sys--dark-high-contrast--surface-dim: #111318;
+    --material-theme--sys--dark-high-contrast--surface-bright: #4E5056;
+    --material-theme--sys--dark-high-contrast--surface-container-lowest: #000000;
+    --material-theme--sys--dark-high-contrast--surface-container-low: #1E2025;
+    --material-theme--sys--dark-high-contrast--surface-container: #2E3036;
+    --material-theme--sys--dark-high-contrast--surface-container-high: #3A3B41;
+    --material-theme--sys--dark-high-contrast--surface-container-highest: #45474C;
+    --material-theme--sys--light-medium-contrast--primary: #163566;
+    --material-theme--sys--light-medium-contrast--surface-tint: #425E91;
+    --material-theme--sys--light-medium-contrast--on-primary: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--primary-container: #526DA1;
+    --material-theme--sys--light-medium-contrast--on-primary-container: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--secondary: #2E3647;
+    --material-theme--sys--light-medium-contrast--on-secondary: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--secondary-container: #656D80;
+    --material-theme--sys--light-medium-contrast--on-secondary-container: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--tertiary: #462E4A;
+    --material-theme--sys--light-medium-contrast--on-tertiary: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--tertiary-container: #806483;
+    --material-theme--sys--light-medium-contrast--on-tertiary-container: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--error: #740006;
+    --material-theme--sys--light-medium-contrast--on-error: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--error-container: #CF2C27;
+    --material-theme--sys--light-medium-contrast--on-error-container: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--background: #F9F9FF;
+    --material-theme--sys--light-medium-contrast--on-background: #1A1C20;
+    --material-theme--sys--light-medium-contrast--surface: #F9F9FF;
+    --material-theme--sys--light-medium-contrast--on-surface: #0F1116;
+    --material-theme--sys--light-medium-contrast--surface-variant: #E0E2EC;
+    --material-theme--sys--light-medium-contrast--on-surface-variant: #33363E;
+    --material-theme--sys--light-medium-contrast--outline: #50525A;
+    --material-theme--sys--light-medium-contrast--outline-variant: #6A6D75;
+    --material-theme--sys--light-medium-contrast--shadow: #000000;
+    --material-theme--sys--light-medium-contrast--scrim: #000000;
+    --material-theme--sys--light-medium-contrast--inverse-surface: #2E3036;
+    --material-theme--sys--light-medium-contrast--inverse-on-surface: #F0F0F7;
+    --material-theme--sys--light-medium-contrast--inverse-primary: #ACC7FF;
+    --material-theme--sys--light-medium-contrast--primary-fixed: #526DA1;
+    --material-theme--sys--light-medium-contrast--on-primary-fixed: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--primary-fixed-dim: #385487;
+    --material-theme--sys--light-medium-contrast--on-primary-fixed-variant: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--secondary-fixed: #656D80;
+    --material-theme--sys--light-medium-contrast--on-secondary-fixed: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--secondary-fixed-dim: #4D5567;
+    --material-theme--sys--light-medium-contrast--on-secondary-fixed-variant: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--tertiary-fixed: #806483;
+    --material-theme--sys--light-medium-contrast--on-tertiary-fixed: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--tertiary-fixed-dim: #664C6A;
+    --material-theme--sys--light-medium-contrast--on-tertiary-fixed-variant: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--surface-dim: #C6C6CD;
+    --material-theme--sys--light-medium-contrast--surface-bright: #F9F9FF;
+    --material-theme--sys--light-medium-contrast--surface-container-lowest: #FFFFFF;
+    --material-theme--sys--light-medium-contrast--surface-container-low: #F3F3FA;
+    --material-theme--sys--light-medium-contrast--surface-container: #E8E7EE;
+    --material-theme--sys--light-medium-contrast--surface-container-high: #DCDCE3;
+    --material-theme--sys--light-medium-contrast--surface-container-highest: #D1D1D8;
+    --material-theme--sys--dark-medium-contrast--primary: #CEDCFF;
+    --material-theme--sys--dark-medium-contrast--surface-tint: #ACC7FF;
+    --material-theme--sys--dark-medium-contrast--on-primary: #002453;
+    --material-theme--sys--dark-medium-contrast--primary-container: #7591C7;
+    --material-theme--sys--dark-medium-contrast--on-primary-container: #000000;
+    --material-theme--sys--dark-medium-contrast--secondary: #D4DCF2;
+    --material-theme--sys--dark-medium-contrast--on-secondary: #1D2636;
+    --material-theme--sys--dark-medium-contrast--secondary-container: #8891A5;
+    --material-theme--sys--dark-medium-contrast--on-secondary-container: #000000;
+    --material-theme--sys--dark-medium-contrast--tertiary: #F4D1F6;
+    --material-theme--sys--dark-medium-contrast--on-tertiary: #341D38;
+    --material-theme--sys--dark-medium-contrast--tertiary-container: #A587A8;
+    --material-theme--sys--dark-medium-contrast--on-tertiary-container: #000000;
+    --material-theme--sys--dark-medium-contrast--error: #FFD2CC;
+    --material-theme--sys--dark-medium-contrast--on-error: #540003;
+    --material-theme--sys--dark-medium-contrast--error-container: #FF5449;
+    --material-theme--sys--dark-medium-contrast--on-error-container: #000000;
+    --material-theme--sys--dark-medium-contrast--background: #111318;
+    --material-theme--sys--dark-medium-contrast--on-background: #E2E2E9;
+    --material-theme--sys--dark-medium-contrast--surface: #111318;
+    --material-theme--sys--dark-medium-contrast--on-surface: #FFFFFF;
+    --material-theme--sys--dark-medium-contrast--surface-variant: #44474E;
+    --material-theme--sys--dark-medium-contrast--on-surface-variant: #DADCE6;
+    --material-theme--sys--dark-medium-contrast--outline: #B0B1BB;
+    --material-theme--sys--dark-medium-contrast--outline-variant: #8E9099;
+    --material-theme--sys--dark-medium-contrast--shadow: #000000;
+    --material-theme--sys--dark-medium-contrast--scrim: #000000;
+    --material-theme--sys--dark-medium-contrast--inverse-surface: #E2E2E9;
+    --material-theme--sys--dark-medium-contrast--inverse-on-surface: #282A2F;
+    --material-theme--sys--dark-medium-contrast--inverse-primary: #2B4779;
+    --material-theme--sys--dark-medium-contrast--primary-fixed: #D7E2FF;
+    --material-theme--sys--dark-medium-contrast--on-primary-fixed: #00102C;
+    --material-theme--sys--dark-medium-contrast--primary-fixed-dim: #ACC7FF;
+    --material-theme--sys--dark-medium-contrast--on-primary-fixed-variant: #163566;
+    --material-theme--sys--dark-medium-contrast--secondary-fixed: #DAE2F9;
+    --material-theme--sys--dark-medium-contrast--on-secondary-fixed: #081121;
+    --material-theme--sys--dark-medium-contrast--secondary-fixed-dim: #BEC6DC;
+    --material-theme--sys--dark-medium-contrast--on-secondary-fixed-variant: #2E3647;
+    --material-theme--sys--dark-medium-contrast--tertiary-fixed: #FBD7FC;
+    --material-theme--sys--dark-medium-contrast--on-tertiary-fixed: #1D0823;
+    --material-theme--sys--dark-medium-contrast--tertiary-fixed-dim: #DDBCE0;
+    --material-theme--sys--dark-medium-contrast--on-tertiary-fixed-variant: #462E4A;
+    --material-theme--sys--dark-medium-contrast--surface-dim: #111318;
+    --material-theme--sys--dark-medium-contrast--surface-bright: #43444A;
+    --material-theme--sys--dark-medium-contrast--surface-container-lowest: #06070C;
+    --material-theme--sys--dark-medium-contrast--surface-container-low: #1C1E22;
+    --material-theme--sys--dark-medium-contrast--surface-container: #26282D;
+    --material-theme--sys--dark-medium-contrast--surface-container-high: #313238;
+    --material-theme--sys--dark-medium-contrast--surface-container-highest: #3C3D43;
+    --material-theme--sys--variable--primary: #425E91;
+    --material-theme--sys--variable--surface-tint: #425E91;
+    --material-theme--sys--variable--on-primary: #FFFFFF;
+    --material-theme--sys--variable--primary-container: #D7E2FF;
+    --material-theme--sys--variable--on-primary-container: #294677;
+    --material-theme--sys--variable--secondary: #565E71;
+    --material-theme--sys--variable--on-secondary: #FFFFFF;
+    --material-theme--sys--variable--secondary-container: #DAE2F9;
+    --material-theme--sys--variable--on-secondary-container: #3F4759;
+    --material-theme--sys--variable--tertiary: #705574;
+    --material-theme--sys--variable--on-tertiary: #FFFFFF;
+    --material-theme--sys--variable--tertiary-container: #FBD7FC;
+    --material-theme--sys--variable--on-tertiary-container: #573E5B;
+    --material-theme--sys--variable--error: #BA1A1A;
+    --material-theme--sys--variable--on-error: #FFFFFF;
+    --material-theme--sys--variable--error-container: #FFDAD6;
+    --material-theme--sys--variable--on-error-container: #93000A;
+    --material-theme--sys--variable--background: #F9F9FF;
+    --material-theme--sys--variable--on-background: #1A1C20;
+    --material-theme--sys--variable--surface: #F9F9FF;
+    --material-theme--sys--variable--on-surface: #1A1C20;
+    --material-theme--sys--variable--surface-variant: #E0E2EC;
+    --material-theme--sys--variable--on-surface-variant: #44474E;
+    --material-theme--sys--variable--outline: #74777F;
+    --material-theme--sys--variable--outline-variant: #C4C6D0;
+    --material-theme--sys--variable--shadow: #000000;
+    --material-theme--sys--variable--scrim: #000000;
+    --material-theme--sys--variable--inverse-surface: #2E3036;
+    --material-theme--sys--variable--inverse-on-surface: #F0F0F7;
+    --material-theme--sys--variable--inverse-primary: #ACC7FF;
+    --material-theme--sys--variable--primary-fixed: #D7E2FF;
+    --material-theme--sys--variable--on-primary-fixed: #001A40;
+    --material-theme--sys--variable--primary-fixed-dim: #ACC7FF;
+    --material-theme--sys--variable--on-primary-fixed-variant: #294677;
+    --material-theme--sys--variable--secondary-fixed: #DAE2F9;
+    --material-theme--sys--variable--on-secondary-fixed: #131C2C;
+    --material-theme--sys--variable--secondary-fixed-dim: #BEC6DC;
+    --material-theme--sys--variable--on-secondary-fixed-variant: #3F4759;
+    --material-theme--sys--variable--tertiary-fixed: #FBD7FC;
+    --material-theme--sys--variable--on-tertiary-fixed: #29132E;
+    --material-theme--sys--variable--tertiary-fixed-dim: #DDBCE0;
+    --material-theme--sys--variable--on-tertiary-fixed-variant: #573E5B;
+    --material-theme--sys--variable--surface-dim: #D9D9E0;
+    --material-theme--sys--variable--surface-bright: #F9F9FF;
+    --material-theme--sys--variable--surface-container-lowest: #FFFFFF;
+    --material-theme--sys--variable--surface-container-low: #F3F3FA;
+    --material-theme--sys--variable--surface-container: #EDEDF4;
+    --material-theme--sys--variable--surface-container-high: #E8E7EE;
+    --material-theme--sys--variable--surface-container-highest: #E2E2E9;
+    --material-theme--ref--primary--primary100: #FFFFFF;
+    --material-theme--ref--primary--primary99: #FEFBFF;
+    --material-theme--ref--primary--primary98: #F9F9FF;
+    --material-theme--ref--primary--primary95: #EDF0FF;
+    --material-theme--ref--primary--primary90: #D7E2FF;
+    --material-theme--ref--primary--primary80: #ACC7FF;
+    --material-theme--ref--primary--primary70: #89ABEF;
+    --material-theme--ref--primary--primary60: #6E91D2;
+    --material-theme--ref--primary--primary50: #5477B6;
+    --material-theme--ref--primary--primary40: #3A5E9C;
+    --material-theme--ref--primary--primary35: #2C528F;
+    --material-theme--ref--primary--primary30: #1E4682;
+    --material-theme--ref--primary--primary25: #0D3A76;
+    --material-theme--ref--primary--primary20: #002F67;
+    --material-theme--ref--primary--primary15: #002453;
+    --material-theme--ref--primary--primary10: #001A40;
+    --material-theme--ref--primary--primary5: #00102C;
+    --material-theme--ref--primary--primary0: #000000;
+    --material-theme--ref--secondary--secondary100: #FFFFFF;
+    --material-theme--ref--secondary--secondary99: #FEFBFF;
+    --material-theme--ref--secondary--secondary98: #F9F9FF;
+    --material-theme--ref--secondary--secondary95: #EDF0FF;
+    --material-theme--ref--secondary--secondary90: #DCE2F5;
+    --material-theme--ref--secondary--secondary80: #C0C6D9;
+    --material-theme--ref--secondary--secondary70: #A5ABBD;
+    --material-theme--ref--secondary--secondary60: #8A91A2;
+    --material-theme--ref--secondary--secondary50: #707788;
+    --material-theme--ref--secondary--secondary40: #585E6E;
+    --material-theme--ref--secondary--secondary35: #4C5262;
+    --material-theme--ref--secondary--secondary30: #404756;
+    --material-theme--ref--secondary--secondary25: #353B4A;
+    --material-theme--ref--secondary--secondary20: #2A303F;
+    --material-theme--ref--secondary--secondary15: #1F2634;
+    --material-theme--ref--secondary--secondary10: #151C29;
+    --material-theme--ref--secondary--secondary5: #0A111E;
+    --material-theme--ref--secondary--secondary0: #000000;
+    --material-theme--ref--tertiary--tertiary100: #FFFFFF;
+    --material-theme--ref--tertiary--tertiary99: #FFFBFF;
+    --material-theme--ref--tertiary--tertiary98: #FFF7FB;
+    --material-theme--ref--tertiary--tertiary95: #FFEBFD;
+    --material-theme--ref--tertiary--tertiary90: #F8D9F8;
+    --material-theme--ref--tertiary--tertiary80: #DBBDDC;
+    --material-theme--ref--tertiary--tertiary70: #BEA2C0;
+    --material-theme--ref--tertiary--tertiary60: #A388A5;
+    --material-theme--ref--tertiary--tertiary50: #886F8A;
+    --material-theme--ref--tertiary--tertiary40: #6E5771;
+    --material-theme--ref--tertiary--tertiary35: #614B64;
+    --material-theme--ref--tertiary--tertiary30: #553F58;
+    --material-theme--ref--tertiary--tertiary25: #49344C;
+    --material-theme--ref--tertiary--tertiary20: #3D2941;
+    --material-theme--ref--tertiary--tertiary15: #321F36;
+    --material-theme--ref--tertiary--tertiary10: #27152B;
+    --material-theme--ref--tertiary--tertiary5: #1C0A20;
+    --material-theme--ref--tertiary--tertiary0: #000000;
+    --material-theme--ref--error--error100: #FFFFFF;
+    --material-theme--ref--error--error99: #FFFBFF;
+    --material-theme--ref--error--error98: #FFF8F7;
+    --material-theme--ref--error--error95: #FFEDEA;
+    --material-theme--ref--error--error90: #FFDAD6;
+    --material-theme--ref--error--error80: #FFB4AB;
+    --material-theme--ref--error--error70: #FF897D;
+    --material-theme--ref--error--error60: #FF5449;
+    --material-theme--ref--error--error50: #DE3730;
+    --material-theme--ref--error--error40: #BA1A1A;
+    --material-theme--ref--error--error35: #A80710;
+    --material-theme--ref--error--error30: #93000A;
+    --material-theme--ref--error--error25: #7E0007;
+    --material-theme--ref--error--error20: #690005;
+    --material-theme--ref--error--error15: #540003;
+    --material-theme--ref--error--error10: #410002;
+    --material-theme--ref--error--error5: #2D0001;
+    --material-theme--ref--error--error0: #000000;
+    --material-theme--ref--neutral--neutral100: #FFFFFF;
+    --material-theme--ref--neutral--neutral99: #FEFBFF;
+    --material-theme--ref--neutral--neutral98: #FBF9FC;
+    --material-theme--ref--neutral--neutral95: #F2F0F3;
+    --material-theme--ref--neutral--neutral90: #E4E2E5;
+    --material-theme--ref--neutral--neutral80: #C7C6C9;
+    --material-theme--ref--neutral--neutral70: #ACABAE;
+    --material-theme--ref--neutral--neutral60: #919093;
+    --material-theme--ref--neutral--neutral50: #77777A;
+    --material-theme--ref--neutral--neutral40: #5E5E61;
+    --material-theme--ref--neutral--neutral35: #525255;
+    --material-theme--ref--neutral--neutral30: #464649;
+    --material-theme--ref--neutral--neutral25: #3B3B3E;
+    --material-theme--ref--neutral--neutral20: #303033;
+    --material-theme--ref--neutral--neutral15: #252628;
+    --material-theme--ref--neutral--neutral10: #1B1B1E;
+    --material-theme--ref--neutral--neutral5: #101113;
+    --material-theme--ref--neutral--neutral0: #000000;
+    --material-theme--ref--neutral-variant--neutral-variant100: #FFFFFF;
+    --material-theme--ref--neutral-variant--neutral-variant99: #FEFBFF;
+    --material-theme--ref--neutral-variant--neutral-variant98: #F9F9FF;
+    --material-theme--ref--neutral-variant--neutral-variant95: #F0F0F9;
+    --material-theme--ref--neutral-variant--neutral-variant90: #E1E2EA;
+    --material-theme--ref--neutral-variant--neutral-variant80: #C5C6CE;
+    --material-theme--ref--neutral-variant--neutral-variant70: #A9ABB3;
+    --material-theme--ref--neutral-variant--neutral-variant60: #8F9098;
+    --material-theme--ref--neutral-variant--neutral-variant50: #75777E;
+    --material-theme--ref--neutral-variant--neutral-variant40: #5C5E65;
+    --material-theme--ref--neutral-variant--neutral-variant35: #505259;
+    --material-theme--ref--neutral-variant--neutral-variant30: #44474D;
+    --material-theme--ref--neutral-variant--neutral-variant25: #393B42;
+    --material-theme--ref--neutral-variant--neutral-variant20: #2E3037;
+    --material-theme--ref--neutral-variant--neutral-variant15: #23262C;
+    --material-theme--ref--neutral-variant--neutral-variant10: #191C21;
+    --material-theme--ref--neutral-variant--neutral-variant5: #0E1117;
+    --material-theme--ref--neutral-variant--neutral-variant0: #000000;
+    --material-theme--key-colors--primary: #00336F;
+    --material-theme--source--seed: #00336F;
+
 }
 
 body {
     font-family: "Atkinson Hyperlegible Next", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    margin: 0;
-    padding: 0;
-    background-color: hsla(261, 56%, 9%, 1);
-    background-image:
-        radial-gradient(at 31% 60%, hsla(237, 48%, 12%, 1) 0px, transparent 50%),
-        radial-gradient(at 4% 21%, hsla(266, 76%, 8%, 1) 0px, transparent 50%),
-        radial-gradient(at 9% 11%, hsla(210, 68%, 11%, 1) 0px, transparent 50%),
-        radial-gradient(at 15% 29%, hsla(189, 62%, 3%, 1) 0px, transparent 50%),
-        radial-gradient(at 82% 55%, hsla(223, 67%, 14%, 1) 0px, transparent 50%),
-        radial-gradient(at 64% 96%, hsla(224, 54%, 8%, 1) 0px, transparent 50%),
-        radial-gradient(at 31% 81%, hsla(247, 64%, 10%, 1) 0px, transparent 50%);
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    min-height: 100vh;
-    font-size: 16px;
-}
-.headerpadding {
-    padding-top: 56px;
 }
 
-.ahc {
-    font-family: "Atkinson Hyperlegible Mono", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+body {
+    background-color: var(--material-theme--sys--dark-medium-contrast--background);
 }
 
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-h1,
-h2 {
-    color: #ffffff;
-    text-align: center;
-}
-
-p {
-    line-height: 1.6;
-    text-align: center;
-    color: #ffffff;
-}
-
-.pfp {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-}
-
-footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-    width: 100%;
-    gap: 8px;
-}
-
-a {
-    color: #c5e2ff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #75acff;
-}
-
-.bi-l {
-    font-size: 1.5rem;
-}
-
-.bi-m {
-    font-size: 16px;
-}
-
-.indent {
-    margin-left: 1em;
-}
-
-.project,
-.post-card {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 0;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.25);
-    padding: 1rem;
-    transition: transform 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.project:hover,
-.post-card:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    transform: rotate3d(10, 20, 30, 5deg) scale(1.1);
-    z-index: 5;
-}
-
-nav {
+.content-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: auto;
-    color: #ffffff;
-    z-index: 50;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-nav ul li {
-    position: relative;
-    width: 12px;
-    height: 20px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    transition: width 0.3s ease;
-    padding: 4px;
-}
-
-nav ul li:hover {
-    width: 100%;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    padding: 6px;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    transition: width 0.3s ease;
-    padding: 4px;
-    gap: 8px;
-    scroll-behavior: smooth;
-}
-
-nav ul li a::before {
-    content: "";
-    min-width: 4px;
-    min-height: 4px;
-    width: 4px;
-    height: 4px;
-    background-color: #fff;
-    margin-left: 0px 8px;
-    border-radius: 4px;
-    display: block;
-    opacity: 1;
-    transition: width 0.15s ease;
-}
-
-nav ul li a:hover::before {
-    width: 40px;
-}
-
-.full {
-    position: relative;
-    height: 100vh;
-    display: flex;
+    padding: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    top: -56px;
+    gap: 10px;
+    flex-shrink: 0;
 }
 
-#setup {
-    display: flex;
-    flex-direction: row;
-}
-
-#setup h2 {
-    text-align: left;
-    width: 100%;
-}
-
-#setup div {
-    padding: 5px;
-    width: 100%;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-}
-
-
-section {
-    padding: 2rem;
-    margin: 0 auto;
-    transition: box-shadow 0.3s ease;
-    animation: fadeIn 1s ease-in-out;
-    width: 700px;
-    border-bottom: rgba(255, 255, 255, 0.25) 1px solid;
-}
-
-button,
-.button {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-    align-items: center;
-}
-
-button:hover,
-.button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
-}
-
-button:focus,
-.button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
-}
-
-.left p {
-    text-align: left;
-    justify-content: left;
-    align-content: left;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(197, 226, 255, 0.1);
-    border-radius: 10px;
-    border: 2px solid hsla(278, 56%, 9%, 1);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(117, 172, 255, 0.25);
-}
-
-#content,
-#post-title {
-    max-width: 35% !important;
-    min-width: 35% !important;
-    width: 35% !important;
-    text-align: left;
-}
-
-#content>p,
-#content>h1,
-#content>h2,
-#content>h3,
-#content>h4,
-#content>h5,
-#content>h6,
-#post-title>p,
-#post-title>h1,
-#post-title>h2,
-#post-title>h3,
-#post-title>h4,
-#post-title>h5,
-#post-title>h6 {
-    text-align: left;
-}
-
-.load {
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 100%;
-    max-width: 100vw;
-    background-color: rgba(0, 0, 0, 0);
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    box-sizing: border-box;
-    gap: 8px;
-    transition: box-shadow 0.3s ease-in, backdrop-filter 0.3s ease-in;
-}
-
-header.scrolled {
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-}
-
-header .button {
-    background-color: transparent;
-    color: white;
-    font-size: 16px;
-}
-
-header .button.selected {
-    opacity: 0.5;
-}
-
-tabs {
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-}
-
-.jump {
+.profile-section {
+    left: calc(50vw - 400px);
+    width: 800px;
     position: absolute;
-    place-self: center;
-    width: 100vw;
-    aspect-ratio: 1/1;
-    z-index: 0!important;
-    opacity: 0.25;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    transform: translate(10%, -10%);
+    transition: left 750ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-#about {
-overflow: visible!important;
+.profile-section.slide-left {
+    left: -320px;
+}
 
-> * {
+.profile-image-container {
+    display: flex;
+    min-width: 300px;
+    min-height: 300px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 9001px;
+    border: 2px solid var(--Schemes-Primary, color(display-p3 0.6745 0.7804 1));
+    background: var(--Schemes-Background, color(display-p3 0.0667 0.0745 0.0941));
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     z-index: 1;
 }
-    svg {
-        overflow: visible!important;
-        clip: none;
-        aspect-ratio: 1/1;
-        width: 100vw;
-    }
+
+.profile-info {
+    display: flex;
+    width: 400px;
+    /* padding: 20px 0px; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    margin-left: -140px;
+}
+
+.profile-info .name {
+    display: flex;
+    padding-left: 120px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    color: var(--material-theme--sys--dark-medium-contrast--primary);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Finlandica;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.profile-info .section {
+    display: flex;
+    width: 298px;
+    height: 32px;
+    padding: 5px 40px 5px 150px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 0px 0px 15px 0px;
+    background: var(--material-theme--sys--dark-medium-contrast--primary);
+    color: var(--material-theme--sys--dark-medium-contrast--background);
+    font-family: Finlandica;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.profile-info .section:hover {
+    width: 350px;
+    scale: 1.05;
+}
+
+.profile-info .section:nth-child(3):hover {
+    background: #FF5F66;
+}
+
+.profile-info .section:nth-child(4):hover {
+    background: #FF9cc5;
+}
+
+.profile-info .section:nth-child(5):hover {
+    background: #FF65e0;
+}
+
+.profile-info .section:nth-child(6):hover {
+    background: #94d2bd;
+}
+
+#content section {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    right: 64px;
+    top: 0px;
+    width: calc(100% - 600px);
+    height: 100vh;
+    overflow-y: scroll;
+    color: white;
+    position: absolute;
+    /* Re-enable this for positioning */
+}
+
+#content section.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+section > h1 {
+    padding-top: calc(50vh - 200px);
+    font-size: 40px;
+    margin: 0px!important;
 }

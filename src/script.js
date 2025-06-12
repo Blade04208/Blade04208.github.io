@@ -1,9 +1,18 @@
-window.addEventListener("scroll", function () {
-    const header = document.querySelector("header");
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled"); // Add class when scrolled
-    } else {
-      header.classList.remove("scrolled"); // Remove class when at top
+function showSection(id) {
+    // Hide all sections
+    document.querySelectorAll("#content section").forEach((section) => {
+        section.classList.remove("active");
+    });
+
+    // Show selected section
+    const target = document.getElementById(id);
+    if (target) {
+        target.classList.add("active");
     }
-  });
-  
+
+    // Slide profile section away
+    const profile = document.querySelector(".profile-section");
+    profile.classList.add("slide-left");
+}
+
+
