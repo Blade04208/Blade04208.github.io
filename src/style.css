@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Finlandica:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
 
 @font-face {
@@ -8,616 +8,163 @@
     font-style: normal;
 }
 
-z html {
+html {
     color: #fff;
+    font-family: "Atkinson Hyperlegible";
     scroll-behavior: smooth;
+    background-color: #0086FF;
+    width: 100vw;
+    height: 100vh;
+    background:
+        linear-gradient(0deg, rgba(0, 136, 255, 1) 0%, rgba(0, 134, 255, 1) 100%),
+        linear-gradient(0deg, rgba(251, 74, 82, 1) 0%, rgba(251, 74, 82, 1) 100%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%),
+        linear-gradient(0deg, rgba(25, 25, 25, 0.40) 0%, rgba(25, 25, 25, 0.40) 100%),
+        url(./jump.png),
+        radial-gradient(119.04% 90.75% at 93.18% 5.93%, #FFFFFF70 0%, #FFFFFF70 100%),
+        radial-gradient(235.62% 229.18% at -53.01% -72.73%, #4184D0 0%, #214167 100%);
+    /* you know this isnt ai generated because no ai would be insane enough to shove this many layers into a bg */
+    background-blend-mode: hue, saturation, overlay, overlay, soft-light, overlay, normal;
 }
 
-:root {
-    /* Color styles */
-    --material-theme--white: #FFFFFF;
-    --material-theme--black: #000000;
-    --material-theme--sys--light--primary: #425E91;
-    --material-theme--sys--light--surface-tint: #425E91;
-    --material-theme--sys--light--on-primary: #FFFFFF;
-    --material-theme--sys--light--primary-container: #D7E2FF;
-    --material-theme--sys--light--on-primary-container: #294677;
-    --material-theme--sys--light--secondary: #565E71;
-    --material-theme--sys--light--on-secondary: #FFFFFF;
-    --material-theme--sys--light--secondary-container: #DAE2F9;
-    --material-theme--sys--light--on-secondary-container: #3F4759;
-    --material-theme--sys--light--tertiary: #705574;
-    --material-theme--sys--light--on-tertiary: #FFFFFF;
-    --material-theme--sys--light--tertiary-container: #FBD7FC;
-    --material-theme--sys--light--on-tertiary-container: #573E5B;
-    --material-theme--sys--light--error: #BA1A1A;
-    --material-theme--sys--light--on-error: #FFFFFF;
-    --material-theme--sys--light--error-container: #FFDAD6;
-    --material-theme--sys--light--on-error-container: #93000A;
-    --material-theme--sys--light--background: #F9F9FF;
-    --material-theme--sys--light--on-background: #1A1C20;
-    --material-theme--sys--light--surface: #F9F9FF;
-    --material-theme--sys--light--on-surface: #1A1C20;
-    --material-theme--sys--light--surface-variant: #E0E2EC;
-    --material-theme--sys--light--on-surface-variant: #44474E;
-    --material-theme--sys--light--outline: #74777F;
-    --material-theme--sys--light--outline-variant: #C4C6D0;
-    --material-theme--sys--light--shadow: #000000;
-    --material-theme--sys--light--scrim: #000000;
-    --material-theme--sys--light--inverse-surface: #2E3036;
-    --material-theme--sys--light--inverse-on-surface: #F0F0F7;
-    --material-theme--sys--light--inverse-primary: #ACC7FF;
-    --material-theme--sys--light--primary-fixed: #D7E2FF;
-    --material-theme--sys--light--on-primary-fixed: #001A40;
-    --material-theme--sys--light--primary-fixed-dim: #ACC7FF;
-    --material-theme--sys--light--on-primary-fixed-variant: #294677;
-    --material-theme--sys--light--secondary-fixed: #DAE2F9;
-    --material-theme--sys--light--on-secondary-fixed: #131C2C;
-    --material-theme--sys--light--secondary-fixed-dim: #BEC6DC;
-    --material-theme--sys--light--on-secondary-fixed-variant: #3F4759;
-    --material-theme--sys--light--tertiary-fixed: #FBD7FC;
-    --material-theme--sys--light--on-tertiary-fixed: #29132E;
-    --material-theme--sys--light--tertiary-fixed-dim: #DDBCE0;
-    --material-theme--sys--light--on-tertiary-fixed-variant: #573E5B;
-    --material-theme--sys--light--surface-dim: #D9D9E0;
-    --material-theme--sys--light--surface-bright: #F9F9FF;
-    --material-theme--sys--light--surface-container-lowest: #FFFFFF;
-    --material-theme--sys--light--surface-container-low: #F3F3FA;
-    --material-theme--sys--light--surface-container: #EDEDF4;
-    --material-theme--sys--light--surface-container-high: #E8E7EE;
-    --material-theme--sys--light--surface-container-highest: #E2E2E9;
-    --material-theme--sys--dark--primary: #ACC7FF;
-    --material-theme--sys--dark--surface-tint: #ACC7FF;
-    --material-theme--sys--dark--on-primary: #0E2F60;
-    --material-theme--sys--dark--primary-container: #294677;
-    --material-theme--sys--dark--on-primary-container: #D7E2FF;
-    --material-theme--sys--dark--secondary: #BEC6DC;
-    --material-theme--sys--dark--on-secondary: #283041;
-    --material-theme--sys--dark--secondary-container: #3F4759;
-    --material-theme--sys--dark--on-secondary-container: #DAE2F9;
-    --material-theme--sys--dark--tertiary: #DDBCE0;
-    --material-theme--sys--dark--on-tertiary: #3F2844;
-    --material-theme--sys--dark--tertiary-container: #573E5B;
-    --material-theme--sys--dark--on-tertiary-container: #FBD7FC;
-    --material-theme--sys--dark--error: #FFB4AB;
-    --material-theme--sys--dark--on-error: #690005;
-    --material-theme--sys--dark--error-container: #93000A;
-    --material-theme--sys--dark--on-error-container: #FFDAD6;
-    --material-theme--sys--dark--background: #111318;
-    --material-theme--sys--dark--on-background: #E2E2E9;
-    --material-theme--sys--dark--surface: #111318;
-    --material-theme--sys--dark--on-surface: #E2E2E9;
-    --material-theme--sys--dark--surface-variant: #44474E;
-    --material-theme--sys--dark--on-surface-variant: #C4C6D0;
-    --material-theme--sys--dark--outline: #8E9099;
-    --material-theme--sys--dark--outline-variant: #44474E;
-    --material-theme--sys--dark--shadow: #000000;
-    --material-theme--sys--dark--scrim: #000000;
-    --material-theme--sys--dark--inverse-surface: #E2E2E9;
-    --material-theme--sys--dark--inverse-on-surface: #2E3036;
-    --material-theme--sys--dark--inverse-primary: #425E91;
-    --material-theme--sys--dark--primary-fixed: #D7E2FF;
-    --material-theme--sys--dark--on-primary-fixed: #001A40;
-    --material-theme--sys--dark--primary-fixed-dim: #ACC7FF;
-    --material-theme--sys--dark--on-primary-fixed-variant: #294677;
-    --material-theme--sys--dark--secondary-fixed: #DAE2F9;
-    --material-theme--sys--dark--on-secondary-fixed: #131C2C;
-    --material-theme--sys--dark--secondary-fixed-dim: #BEC6DC;
-    --material-theme--sys--dark--on-secondary-fixed-variant: #3F4759;
-    --material-theme--sys--dark--tertiary-fixed: #FBD7FC;
-    --material-theme--sys--dark--on-tertiary-fixed: #29132E;
-    --material-theme--sys--dark--tertiary-fixed-dim: #DDBCE0;
-    --material-theme--sys--dark--on-tertiary-fixed-variant: #573E5B;
-    --material-theme--sys--dark--surface-dim: #111318;
-    --material-theme--sys--dark--surface-bright: #37393E;
-    --material-theme--sys--dark--surface-container-lowest: #0C0E13;
-    --material-theme--sys--dark--surface-container-low: #1A1C20;
-    --material-theme--sys--dark--surface-container: #1E2025;
-    --material-theme--sys--dark--surface-container-high: #282A2F;
-    --material-theme--sys--dark--surface-container-highest: #33353A;
-    --material-theme--sys--light-high-contrast--primary: #072B5B;
-    --material-theme--sys--light-high-contrast--surface-tint: #425E91;
-    --material-theme--sys--light-high-contrast--on-primary: #FFFFFF;
-    --material-theme--sys--light-high-contrast--primary-container: #2C497A;
-    --material-theme--sys--light-high-contrast--on-primary-container: #FFFFFF;
-    --material-theme--sys--light-high-contrast--secondary: #242C3D;
-    --material-theme--sys--light-high-contrast--on-secondary: #FFFFFF;
-    --material-theme--sys--light-high-contrast--secondary-container: #41495B;
-    --material-theme--sys--light-high-contrast--on-secondary-container: #FFFFFF;
-    --material-theme--sys--light-high-contrast--tertiary: #3B243F;
-    --material-theme--sys--light-high-contrast--on-tertiary: #FFFFFF;
-    --material-theme--sys--light-high-contrast--tertiary-container: #5A405E;
-    --material-theme--sys--light-high-contrast--on-tertiary-container: #FFFFFF;
-    --material-theme--sys--light-high-contrast--error: #600004;
-    --material-theme--sys--light-high-contrast--on-error: #FFFFFF;
-    --material-theme--sys--light-high-contrast--error-container: #98000A;
-    --material-theme--sys--light-high-contrast--on-error-container: #FFFFFF;
-    --material-theme--sys--light-high-contrast--background: #F9F9FF;
-    --material-theme--sys--light-high-contrast--on-background: #1A1C20;
-    --material-theme--sys--light-high-contrast--surface: #F9F9FF;
-    --material-theme--sys--light-high-contrast--on-surface: #000000;
-    --material-theme--sys--light-high-contrast--surface-variant: #E0E2EC;
-    --material-theme--sys--light-high-contrast--on-surface-variant: #000000;
-    --material-theme--sys--light-high-contrast--outline: #292C33;
-    --material-theme--sys--light-high-contrast--outline-variant: #464951;
-    --material-theme--sys--light-high-contrast--shadow: #000000;
-    --material-theme--sys--light-high-contrast--scrim: #000000;
-    --material-theme--sys--light-high-contrast--inverse-surface: #2E3036;
-    --material-theme--sys--light-high-contrast--inverse-on-surface: #FFFFFF;
-    --material-theme--sys--light-high-contrast--inverse-primary: #ACC7FF;
-    --material-theme--sys--light-high-contrast--primary-fixed: #2C497A;
-    --material-theme--sys--light-high-contrast--on-primary-fixed: #FFFFFF;
-    --material-theme--sys--light-high-contrast--primary-fixed-dim: #113262;
-    --material-theme--sys--light-high-contrast--on-primary-fixed-variant: #FFFFFF;
-    --material-theme--sys--light-high-contrast--secondary-fixed: #41495B;
-    --material-theme--sys--light-high-contrast--on-secondary-fixed: #FFFFFF;
-    --material-theme--sys--light-high-contrast--secondary-fixed-dim: #2A3344;
-    --material-theme--sys--light-high-contrast--on-secondary-fixed-variant: #FFFFFF;
-    --material-theme--sys--light-high-contrast--tertiary-fixed: #5A405E;
-    --material-theme--sys--light-high-contrast--on-tertiary-fixed: #FFFFFF;
-    --material-theme--sys--light-high-contrast--tertiary-fixed-dim: #422A46;
-    --material-theme--sys--light-high-contrast--on-tertiary-fixed-variant: #FFFFFF;
-    --material-theme--sys--light-high-contrast--surface-dim: #B8B8BF;
-    --material-theme--sys--light-high-contrast--surface-bright: #F9F9FF;
-    --material-theme--sys--light-high-contrast--surface-container-lowest: #FFFFFF;
-    --material-theme--sys--light-high-contrast--surface-container-low: #F0F0F7;
-    --material-theme--sys--light-high-contrast--surface-container: #E2E2E9;
-    --material-theme--sys--light-high-contrast--surface-container-high: #D4D4DB;
-    --material-theme--sys--light-high-contrast--surface-container-highest: #C6C6CD;
-    --material-theme--sys--dark-high-contrast--primary: #EBF0FF;
-    --material-theme--sys--dark-high-contrast--surface-tint: #ACC7FF;
-    --material-theme--sys--dark-high-contrast--on-primary: #000000;
-    --material-theme--sys--dark-high-contrast--primary-container: #A7C3FC;
-    --material-theme--sys--dark-high-contrast--on-primary-container: #000B21;
-    --material-theme--sys--dark-high-contrast--secondary: #EBF0FF;
-    --material-theme--sys--dark-high-contrast--on-secondary: #000000;
-    --material-theme--sys--dark-high-contrast--secondary-container: #BAC2D8;
-    --material-theme--sys--dark-high-contrast--on-secondary-container: #040B1A;
-    --material-theme--sys--dark-high-contrast--tertiary: #FFEAFD;
-    --material-theme--sys--dark-high-contrast--on-tertiary: #000000;
-    --material-theme--sys--dark-high-contrast--tertiary-container: #D9B8DC;
-    --material-theme--sys--dark-high-contrast--on-tertiary-container: #17031C;
-    --material-theme--sys--dark-high-contrast--error: #FFECE9;
-    --material-theme--sys--dark-high-contrast--on-error: #000000;
-    --material-theme--sys--dark-high-contrast--error-container: #FFAEA4;
-    --material-theme--sys--dark-high-contrast--on-error-container: #220001;
-    --material-theme--sys--dark-high-contrast--background: #111318;
-    --material-theme--sys--dark-high-contrast--on-background: #E2E2E9;
-    --material-theme--sys--dark-high-contrast--surface: #111318;
-    --material-theme--sys--dark-high-contrast--on-surface: #FFFFFF;
-    --material-theme--sys--dark-high-contrast--surface-variant: #44474E;
-    --material-theme--sys--dark-high-contrast--on-surface-variant: #FFFFFF;
-    --material-theme--sys--dark-high-contrast--outline: #EEEFF9;
-    --material-theme--sys--dark-high-contrast--outline-variant: #C0C2CC;
-    --material-theme--sys--dark-high-contrast--shadow: #000000;
-    --material-theme--sys--dark-high-contrast--scrim: #000000;
-    --material-theme--sys--dark-high-contrast--inverse-surface: #E2E2E9;
-    --material-theme--sys--dark-high-contrast--inverse-on-surface: #000000;
-    --material-theme--sys--dark-high-contrast--inverse-primary: #2B4779;
-    --material-theme--sys--dark-high-contrast--primary-fixed: #D7E2FF;
-    --material-theme--sys--dark-high-contrast--on-primary-fixed: #000000;
-    --material-theme--sys--dark-high-contrast--primary-fixed-dim: #ACC7FF;
-    --material-theme--sys--dark-high-contrast--on-primary-fixed-variant: #00102C;
-    --material-theme--sys--dark-high-contrast--secondary-fixed: #DAE2F9;
-    --material-theme--sys--dark-high-contrast--on-secondary-fixed: #000000;
-    --material-theme--sys--dark-high-contrast--secondary-fixed-dim: #BEC6DC;
-    --material-theme--sys--dark-high-contrast--on-secondary-fixed-variant: #081121;
-    --material-theme--sys--dark-high-contrast--tertiary-fixed: #FBD7FC;
-    --material-theme--sys--dark-high-contrast--on-tertiary-fixed: #000000;
-    --material-theme--sys--dark-high-contrast--tertiary-fixed-dim: #DDBCE0;
-    --material-theme--sys--dark-high-contrast--on-tertiary-fixed-variant: #1D0823;
-    --material-theme--sys--dark-high-contrast--surface-dim: #111318;
-    --material-theme--sys--dark-high-contrast--surface-bright: #4E5056;
-    --material-theme--sys--dark-high-contrast--surface-container-lowest: #000000;
-    --material-theme--sys--dark-high-contrast--surface-container-low: #1E2025;
-    --material-theme--sys--dark-high-contrast--surface-container: #2E3036;
-    --material-theme--sys--dark-high-contrast--surface-container-high: #3A3B41;
-    --material-theme--sys--dark-high-contrast--surface-container-highest: #45474C;
-    --material-theme--sys--light-medium-contrast--primary: #163566;
-    --material-theme--sys--light-medium-contrast--surface-tint: #425E91;
-    --material-theme--sys--light-medium-contrast--on-primary: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--primary-container: #526DA1;
-    --material-theme--sys--light-medium-contrast--on-primary-container: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--secondary: #2E3647;
-    --material-theme--sys--light-medium-contrast--on-secondary: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--secondary-container: #656D80;
-    --material-theme--sys--light-medium-contrast--on-secondary-container: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--tertiary: #462E4A;
-    --material-theme--sys--light-medium-contrast--on-tertiary: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--tertiary-container: #806483;
-    --material-theme--sys--light-medium-contrast--on-tertiary-container: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--error: #740006;
-    --material-theme--sys--light-medium-contrast--on-error: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--error-container: #CF2C27;
-    --material-theme--sys--light-medium-contrast--on-error-container: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--background: #F9F9FF;
-    --material-theme--sys--light-medium-contrast--on-background: #1A1C20;
-    --material-theme--sys--light-medium-contrast--surface: #F9F9FF;
-    --material-theme--sys--light-medium-contrast--on-surface: #0F1116;
-    --material-theme--sys--light-medium-contrast--surface-variant: #E0E2EC;
-    --material-theme--sys--light-medium-contrast--on-surface-variant: #33363E;
-    --material-theme--sys--light-medium-contrast--outline: #50525A;
-    --material-theme--sys--light-medium-contrast--outline-variant: #6A6D75;
-    --material-theme--sys--light-medium-contrast--shadow: #000000;
-    --material-theme--sys--light-medium-contrast--scrim: #000000;
-    --material-theme--sys--light-medium-contrast--inverse-surface: #2E3036;
-    --material-theme--sys--light-medium-contrast--inverse-on-surface: #F0F0F7;
-    --material-theme--sys--light-medium-contrast--inverse-primary: #ACC7FF;
-    --material-theme--sys--light-medium-contrast--primary-fixed: #526DA1;
-    --material-theme--sys--light-medium-contrast--on-primary-fixed: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--primary-fixed-dim: #385487;
-    --material-theme--sys--light-medium-contrast--on-primary-fixed-variant: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--secondary-fixed: #656D80;
-    --material-theme--sys--light-medium-contrast--on-secondary-fixed: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--secondary-fixed-dim: #4D5567;
-    --material-theme--sys--light-medium-contrast--on-secondary-fixed-variant: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--tertiary-fixed: #806483;
-    --material-theme--sys--light-medium-contrast--on-tertiary-fixed: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--tertiary-fixed-dim: #664C6A;
-    --material-theme--sys--light-medium-contrast--on-tertiary-fixed-variant: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--surface-dim: #C6C6CD;
-    --material-theme--sys--light-medium-contrast--surface-bright: #F9F9FF;
-    --material-theme--sys--light-medium-contrast--surface-container-lowest: #FFFFFF;
-    --material-theme--sys--light-medium-contrast--surface-container-low: #F3F3FA;
-    --material-theme--sys--light-medium-contrast--surface-container: #E8E7EE;
-    --material-theme--sys--light-medium-contrast--surface-container-high: #DCDCE3;
-    --material-theme--sys--light-medium-contrast--surface-container-highest: #D1D1D8;
-    --material-theme--sys--dark-medium-contrast--primary: #CEDCFF;
-    --material-theme--sys--dark-medium-contrast--surface-tint: #ACC7FF;
-    --material-theme--sys--dark-medium-contrast--on-primary: #002453;
-    --material-theme--sys--dark-medium-contrast--primary-container: #7591C7;
-    --material-theme--sys--dark-medium-contrast--on-primary-container: #000000;
-    --material-theme--sys--dark-medium-contrast--secondary: #D4DCF2;
-    --material-theme--sys--dark-medium-contrast--on-secondary: #1D2636;
-    --material-theme--sys--dark-medium-contrast--secondary-container: #8891A5;
-    --material-theme--sys--dark-medium-contrast--on-secondary-container: #000000;
-    --material-theme--sys--dark-medium-contrast--tertiary: #F4D1F6;
-    --material-theme--sys--dark-medium-contrast--on-tertiary: #341D38;
-    --material-theme--sys--dark-medium-contrast--tertiary-container: #A587A8;
-    --material-theme--sys--dark-medium-contrast--on-tertiary-container: #000000;
-    --material-theme--sys--dark-medium-contrast--error: #FFD2CC;
-    --material-theme--sys--dark-medium-contrast--on-error: #540003;
-    --material-theme--sys--dark-medium-contrast--error-container: #FF5449;
-    --material-theme--sys--dark-medium-contrast--on-error-container: #000000;
-    --material-theme--sys--dark-medium-contrast--background: #111318;
-    --material-theme--sys--dark-medium-contrast--on-background: #E2E2E9;
-    --material-theme--sys--dark-medium-contrast--surface: #111318;
-    --material-theme--sys--dark-medium-contrast--on-surface: #FFFFFF;
-    --material-theme--sys--dark-medium-contrast--surface-variant: #44474E;
-    --material-theme--sys--dark-medium-contrast--on-surface-variant: #DADCE6;
-    --material-theme--sys--dark-medium-contrast--outline: #B0B1BB;
-    --material-theme--sys--dark-medium-contrast--outline-variant: #8E9099;
-    --material-theme--sys--dark-medium-contrast--shadow: #000000;
-    --material-theme--sys--dark-medium-contrast--scrim: #000000;
-    --material-theme--sys--dark-medium-contrast--inverse-surface: #E2E2E9;
-    --material-theme--sys--dark-medium-contrast--inverse-on-surface: #282A2F;
-    --material-theme--sys--dark-medium-contrast--inverse-primary: #2B4779;
-    --material-theme--sys--dark-medium-contrast--primary-fixed: #D7E2FF;
-    --material-theme--sys--dark-medium-contrast--on-primary-fixed: #00102C;
-    --material-theme--sys--dark-medium-contrast--primary-fixed-dim: #ACC7FF;
-    --material-theme--sys--dark-medium-contrast--on-primary-fixed-variant: #163566;
-    --material-theme--sys--dark-medium-contrast--secondary-fixed: #DAE2F9;
-    --material-theme--sys--dark-medium-contrast--on-secondary-fixed: #081121;
-    --material-theme--sys--dark-medium-contrast--secondary-fixed-dim: #BEC6DC;
-    --material-theme--sys--dark-medium-contrast--on-secondary-fixed-variant: #2E3647;
-    --material-theme--sys--dark-medium-contrast--tertiary-fixed: #FBD7FC;
-    --material-theme--sys--dark-medium-contrast--on-tertiary-fixed: #1D0823;
-    --material-theme--sys--dark-medium-contrast--tertiary-fixed-dim: #DDBCE0;
-    --material-theme--sys--dark-medium-contrast--on-tertiary-fixed-variant: #462E4A;
-    --material-theme--sys--dark-medium-contrast--surface-dim: #111318;
-    --material-theme--sys--dark-medium-contrast--surface-bright: #43444A;
-    --material-theme--sys--dark-medium-contrast--surface-container-lowest: #06070C;
-    --material-theme--sys--dark-medium-contrast--surface-container-low: #1C1E22;
-    --material-theme--sys--dark-medium-contrast--surface-container: #26282D;
-    --material-theme--sys--dark-medium-contrast--surface-container-high: #313238;
-    --material-theme--sys--dark-medium-contrast--surface-container-highest: #3C3D43;
-    --material-theme--sys--variable--primary: #425E91;
-    --material-theme--sys--variable--surface-tint: #425E91;
-    --material-theme--sys--variable--on-primary: #FFFFFF;
-    --material-theme--sys--variable--primary-container: #D7E2FF;
-    --material-theme--sys--variable--on-primary-container: #294677;
-    --material-theme--sys--variable--secondary: #565E71;
-    --material-theme--sys--variable--on-secondary: #FFFFFF;
-    --material-theme--sys--variable--secondary-container: #DAE2F9;
-    --material-theme--sys--variable--on-secondary-container: #3F4759;
-    --material-theme--sys--variable--tertiary: #705574;
-    --material-theme--sys--variable--on-tertiary: #FFFFFF;
-    --material-theme--sys--variable--tertiary-container: #FBD7FC;
-    --material-theme--sys--variable--on-tertiary-container: #573E5B;
-    --material-theme--sys--variable--error: #BA1A1A;
-    --material-theme--sys--variable--on-error: #FFFFFF;
-    --material-theme--sys--variable--error-container: #FFDAD6;
-    --material-theme--sys--variable--on-error-container: #93000A;
-    --material-theme--sys--variable--background: #F9F9FF;
-    --material-theme--sys--variable--on-background: #1A1C20;
-    --material-theme--sys--variable--surface: #F9F9FF;
-    --material-theme--sys--variable--on-surface: #1A1C20;
-    --material-theme--sys--variable--surface-variant: #E0E2EC;
-    --material-theme--sys--variable--on-surface-variant: #44474E;
-    --material-theme--sys--variable--outline: #74777F;
-    --material-theme--sys--variable--outline-variant: #C4C6D0;
-    --material-theme--sys--variable--shadow: #000000;
-    --material-theme--sys--variable--scrim: #000000;
-    --material-theme--sys--variable--inverse-surface: #2E3036;
-    --material-theme--sys--variable--inverse-on-surface: #F0F0F7;
-    --material-theme--sys--variable--inverse-primary: #ACC7FF;
-    --material-theme--sys--variable--primary-fixed: #D7E2FF;
-    --material-theme--sys--variable--on-primary-fixed: #001A40;
-    --material-theme--sys--variable--primary-fixed-dim: #ACC7FF;
-    --material-theme--sys--variable--on-primary-fixed-variant: #294677;
-    --material-theme--sys--variable--secondary-fixed: #DAE2F9;
-    --material-theme--sys--variable--on-secondary-fixed: #131C2C;
-    --material-theme--sys--variable--secondary-fixed-dim: #BEC6DC;
-    --material-theme--sys--variable--on-secondary-fixed-variant: #3F4759;
-    --material-theme--sys--variable--tertiary-fixed: #FBD7FC;
-    --material-theme--sys--variable--on-tertiary-fixed: #29132E;
-    --material-theme--sys--variable--tertiary-fixed-dim: #DDBCE0;
-    --material-theme--sys--variable--on-tertiary-fixed-variant: #573E5B;
-    --material-theme--sys--variable--surface-dim: #D9D9E0;
-    --material-theme--sys--variable--surface-bright: #F9F9FF;
-    --material-theme--sys--variable--surface-container-lowest: #FFFFFF;
-    --material-theme--sys--variable--surface-container-low: #F3F3FA;
-    --material-theme--sys--variable--surface-container: #EDEDF4;
-    --material-theme--sys--variable--surface-container-high: #E8E7EE;
-    --material-theme--sys--variable--surface-container-highest: #E2E2E9;
-    --material-theme--ref--primary--primary100: #FFFFFF;
-    --material-theme--ref--primary--primary99: #FEFBFF;
-    --material-theme--ref--primary--primary98: #F9F9FF;
-    --material-theme--ref--primary--primary95: #EDF0FF;
-    --material-theme--ref--primary--primary90: #D7E2FF;
-    --material-theme--ref--primary--primary80: #ACC7FF;
-    --material-theme--ref--primary--primary70: #89ABEF;
-    --material-theme--ref--primary--primary60: #6E91D2;
-    --material-theme--ref--primary--primary50: #5477B6;
-    --material-theme--ref--primary--primary40: #3A5E9C;
-    --material-theme--ref--primary--primary35: #2C528F;
-    --material-theme--ref--primary--primary30: #1E4682;
-    --material-theme--ref--primary--primary25: #0D3A76;
-    --material-theme--ref--primary--primary20: #002F67;
-    --material-theme--ref--primary--primary15: #002453;
-    --material-theme--ref--primary--primary10: #001A40;
-    --material-theme--ref--primary--primary5: #00102C;
-    --material-theme--ref--primary--primary0: #000000;
-    --material-theme--ref--secondary--secondary100: #FFFFFF;
-    --material-theme--ref--secondary--secondary99: #FEFBFF;
-    --material-theme--ref--secondary--secondary98: #F9F9FF;
-    --material-theme--ref--secondary--secondary95: #EDF0FF;
-    --material-theme--ref--secondary--secondary90: #DCE2F5;
-    --material-theme--ref--secondary--secondary80: #C0C6D9;
-    --material-theme--ref--secondary--secondary70: #A5ABBD;
-    --material-theme--ref--secondary--secondary60: #8A91A2;
-    --material-theme--ref--secondary--secondary50: #707788;
-    --material-theme--ref--secondary--secondary40: #585E6E;
-    --material-theme--ref--secondary--secondary35: #4C5262;
-    --material-theme--ref--secondary--secondary30: #404756;
-    --material-theme--ref--secondary--secondary25: #353B4A;
-    --material-theme--ref--secondary--secondary20: #2A303F;
-    --material-theme--ref--secondary--secondary15: #1F2634;
-    --material-theme--ref--secondary--secondary10: #151C29;
-    --material-theme--ref--secondary--secondary5: #0A111E;
-    --material-theme--ref--secondary--secondary0: #000000;
-    --material-theme--ref--tertiary--tertiary100: #FFFFFF;
-    --material-theme--ref--tertiary--tertiary99: #FFFBFF;
-    --material-theme--ref--tertiary--tertiary98: #FFF7FB;
-    --material-theme--ref--tertiary--tertiary95: #FFEBFD;
-    --material-theme--ref--tertiary--tertiary90: #F8D9F8;
-    --material-theme--ref--tertiary--tertiary80: #DBBDDC;
-    --material-theme--ref--tertiary--tertiary70: #BEA2C0;
-    --material-theme--ref--tertiary--tertiary60: #A388A5;
-    --material-theme--ref--tertiary--tertiary50: #886F8A;
-    --material-theme--ref--tertiary--tertiary40: #6E5771;
-    --material-theme--ref--tertiary--tertiary35: #614B64;
-    --material-theme--ref--tertiary--tertiary30: #553F58;
-    --material-theme--ref--tertiary--tertiary25: #49344C;
-    --material-theme--ref--tertiary--tertiary20: #3D2941;
-    --material-theme--ref--tertiary--tertiary15: #321F36;
-    --material-theme--ref--tertiary--tertiary10: #27152B;
-    --material-theme--ref--tertiary--tertiary5: #1C0A20;
-    --material-theme--ref--tertiary--tertiary0: #000000;
-    --material-theme--ref--error--error100: #FFFFFF;
-    --material-theme--ref--error--error99: #FFFBFF;
-    --material-theme--ref--error--error98: #FFF8F7;
-    --material-theme--ref--error--error95: #FFEDEA;
-    --material-theme--ref--error--error90: #FFDAD6;
-    --material-theme--ref--error--error80: #FFB4AB;
-    --material-theme--ref--error--error70: #FF897D;
-    --material-theme--ref--error--error60: #FF5449;
-    --material-theme--ref--error--error50: #DE3730;
-    --material-theme--ref--error--error40: #BA1A1A;
-    --material-theme--ref--error--error35: #A80710;
-    --material-theme--ref--error--error30: #93000A;
-    --material-theme--ref--error--error25: #7E0007;
-    --material-theme--ref--error--error20: #690005;
-    --material-theme--ref--error--error15: #540003;
-    --material-theme--ref--error--error10: #410002;
-    --material-theme--ref--error--error5: #2D0001;
-    --material-theme--ref--error--error0: #000000;
-    --material-theme--ref--neutral--neutral100: #FFFFFF;
-    --material-theme--ref--neutral--neutral99: #FEFBFF;
-    --material-theme--ref--neutral--neutral98: #FBF9FC;
-    --material-theme--ref--neutral--neutral95: #F2F0F3;
-    --material-theme--ref--neutral--neutral90: #E4E2E5;
-    --material-theme--ref--neutral--neutral80: #C7C6C9;
-    --material-theme--ref--neutral--neutral70: #ACABAE;
-    --material-theme--ref--neutral--neutral60: #919093;
-    --material-theme--ref--neutral--neutral50: #77777A;
-    --material-theme--ref--neutral--neutral40: #5E5E61;
-    --material-theme--ref--neutral--neutral35: #525255;
-    --material-theme--ref--neutral--neutral30: #464649;
-    --material-theme--ref--neutral--neutral25: #3B3B3E;
-    --material-theme--ref--neutral--neutral20: #303033;
-    --material-theme--ref--neutral--neutral15: #252628;
-    --material-theme--ref--neutral--neutral10: #1B1B1E;
-    --material-theme--ref--neutral--neutral5: #101113;
-    --material-theme--ref--neutral--neutral0: #000000;
-    --material-theme--ref--neutral-variant--neutral-variant100: #FFFFFF;
-    --material-theme--ref--neutral-variant--neutral-variant99: #FEFBFF;
-    --material-theme--ref--neutral-variant--neutral-variant98: #F9F9FF;
-    --material-theme--ref--neutral-variant--neutral-variant95: #F0F0F9;
-    --material-theme--ref--neutral-variant--neutral-variant90: #E1E2EA;
-    --material-theme--ref--neutral-variant--neutral-variant80: #C5C6CE;
-    --material-theme--ref--neutral-variant--neutral-variant70: #A9ABB3;
-    --material-theme--ref--neutral-variant--neutral-variant60: #8F9098;
-    --material-theme--ref--neutral-variant--neutral-variant50: #75777E;
-    --material-theme--ref--neutral-variant--neutral-variant40: #5C5E65;
-    --material-theme--ref--neutral-variant--neutral-variant35: #505259;
-    --material-theme--ref--neutral-variant--neutral-variant30: #44474D;
-    --material-theme--ref--neutral-variant--neutral-variant25: #393B42;
-    --material-theme--ref--neutral-variant--neutral-variant20: #2E3037;
-    --material-theme--ref--neutral-variant--neutral-variant15: #23262C;
-    --material-theme--ref--neutral-variant--neutral-variant10: #191C21;
-    --material-theme--ref--neutral-variant--neutral-variant5: #0E1117;
-    --material-theme--ref--neutral-variant--neutral-variant0: #000000;
-    --material-theme--key-colors--primary: #00336F;
-    --material-theme--source--seed: #00336F;
 
-}
 
 body {
-    font-family: "Atkinson Hyperlegible Next", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
-body {
-    background-color: var(--material-theme--sys--dark-medium-contrast--background);
-}
-
-.content-container {
-    position: fixed;
     display: flex;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    padding: 10px;
+    align-items: flex-start;
+    /* background: linear-gradient(0deg, color(display-p3 0 0.5167 1) 0%, color(display-p3 0 0.5167 1) 100%), linear-gradient(0deg, color(display-p3 0.9087 0.3451 0.3451) 0%, color(display-p3 0.9087 0.3451 0.3451) 100%), linear-gradient(0deg, color(display-p3 1 1 1 / 0.20) 0%, color(display-p3 1 1 1 / 0.20) 100%), linear-gradient(0deg, color(display-p3 0.0962 0.0962 0.0962 / 0.40) 0%, color(display-p3 0.0962 0.0962 0.0962 / 0.40) 100%), url(./jump.png) lightgray 50% / cover no-repeat, radial-gradient(119.04% 90.75% at 93.18% 5.93%, color(display-p3 1 1 1) 0%, color(display-p3 1 1 1 / 0.00) 100%), radial-gradient(235.62% 229.18% at -53.01% -72.73%, color(display-p3 0.3207 0.5101 0.7942) 0%, color(display-p3 0.1592 0.2532 0.3942) 100%); */
+    height: 100vh;
+}
+
+.sidebar {
+    display: flex;
+    padding: 15px 30px;
+    background: color(display-p3 0 0 0 / 0.00);
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+    backdrop-filter: blur(0px);
 }
 
-.profile-section {
-    left: calc(50vw - 400px);
-    width: 800px;
-    position: absolute;
+.main-content {
     display: flex;
-    align-items: center;
-    align-self: center;
-    transform: translate(10%, -10%);
-    transition: left 750ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.profile-section.slide-left {
-    left: -320px;
-}
-
-.profile-image-container {
-    display: flex;
-    min-width: 300px;
-    min-height: 300px;
-    aspect-ratio: 1/1;
-    overflow: hidden;
-    padding: 10px;
-    border-radius: 9001px;
-    border: 2px solid var(--Schemes-Primary, color(display-p3 0.6745 0.7804 1));
-    background: var(--Schemes-Background, color(display-p3 0.0667 0.0745 0.0941));
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    z-index: 1;
-}
-
-.profile-info {
-    display: flex;
-    width: 400px;
-    /* padding: 20px 0px; */
+    padding: 80px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
+    gap: 20px;
+    flex: 1 0 0;
     align-self: stretch;
-    margin-left: -140px;
 }
 
-.profile-info .name {
+.logo {
     display: flex;
-    padding-left: 120px;
+    padding: 10px 15px;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    align-self: stretch;
-    color: var(--material-theme--sys--dark-medium-contrast--primary);
-    leading-trim: both;
-    text-edge: cap;
-    font-family: Finlandica;
-    font-size: 48px;
+    gap: 20px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    color: color(display-p3 1 1 1);
+    font-family: "Atkinson Hyperlegible";
+    font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.profile-info .section {
+nav {
     display: flex;
-    width: 298px;
-    height: 32px;
-    padding: 5px 40px 5px 150px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.nav-item {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 0px 0px 15px 0px;
-    background: var(--material-theme--sys--dark-medium-contrast--primary);
-    color: var(--material-theme--sys--dark-medium-contrast--background);
-    font-family: Finlandica;
-    font-size: 24px;
+    color: color(display-p3 1 1 1 / 0.25);
+    font-family: "Atkinson Hyperlegible";
+    font-size: 32px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
-    transition: all 0.2s;
-    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    .icon {
+        display: none;
+        opacity: 0;
+    }
+
+    &:hover {
+        padding: 10px 20px;
+        color: color(display-p3 1 1 1 / 1);
+    }
+
+    &:active {
+        font-weight: 700;
+    }
 }
 
-.profile-info .section:hover {
-    width: 350px;
-    scale: 1.05;
+.nav-item.selected {
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    backdrop-filter: blur(5px);
+    color: color(display-p3 1 1 1);
+    font-family: "Atkinson Hyperlegible";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    .icon {
+        display: block;
+        opacity: 1;
+    }
 }
 
-.profile-info .section:nth-child(3):hover {
-    background: #FF5F66;
+
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.profile-info .section:nth-child(4):hover {
-    background: #FF9cc5;
+.footer-container {
+    display: flex;
+    width: 300px;
+    height: 45px;
+    overflow: hidden;
+    padding: 10px 0 10px 20px;
+    border-radius: 20px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    align-items: center;
+    gap: 10px;
 }
 
-.profile-info .section:nth-child(5):hover {
-    background: #FF65e0;
-}
-
-.profile-info .section:nth-child(6):hover {
-    background: #94d2bd;
-}
-
-#content section {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-    right: 64px;
-    top: 0px;
-    width: calc(100% - 600px);
-    height: 100vh;
-    overflow-y: scroll;
-    color: white;
-    position: absolute;
-    /* Re-enable this for positioning */
-}
-
-#content section.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-section > h1 {
-    padding-top: calc(50vh - 200px);
-    font-size: 40px;
-    margin: 0px!important;
+p {
+    color: #FFF;
+    color: color(display-p3 1 1 1);
+    font-family: "Atkinson Hyperlegible";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
