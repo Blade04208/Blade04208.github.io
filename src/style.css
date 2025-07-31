@@ -8,7 +8,12 @@
     font-style: normal;
 }
 
+.nocss {
+    display: none;
+}
+
 html {
+    /* --pagecol: rgba(0, 136, 255, 1); */
     color: #fff;
     font-family: "Atkinson Hyperlegible";
     scroll-behavior: smooth;
@@ -16,7 +21,7 @@ html {
     width: 100vw;
     height: 100vh;
     background:
-        linear-gradient(0deg, rgba(0, 136, 255, 1) 0%, rgba(0, 134, 255, 1) 100%),
+        /* linear-gradient(0deg, color-mix(in srgb, var(--pagecol), transparent 50%) 0%, color-mix(in srgb, var(--pagecol), transparent 50%) 100%), */
         linear-gradient(0deg, rgba(251, 74, 82, 1) 0%, rgba(251, 74, 82, 1) 100%),
         linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%),
         linear-gradient(0deg, rgba(25, 25, 25, 0.40) 0%, rgba(25, 25, 25, 0.40) 100%),
@@ -25,29 +30,54 @@ html {
         radial-gradient(235.62% 229.18% at -53.01% -72.73%, #4184D0 0%, #214167 100%);
     /* you know this isnt ai generated because no ai would be insane enough to shove this many layers into a bg */
     background-blend-mode: hue, saturation, overlay, overlay, soft-light, overlay, normal;
+    /* transition: background 0.4s ease, background-color 0.4s ease; */
+    transition: background-image 0.4s ease;
+}
+
+html::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--pagecol);
+    mix-blend-mode: hue;
+    transition: background-color 1s;
+    z-index: 2;
+    pointer-events: none;
 }
 
 
+
+nf {
+    font-family: "NerdFontsSymbols Nerd Font";
+    font-size: inherit;
+}
+
+.logo svg path {
+    fill: white !important;
+}
 
 body {
     display: flex;
     align-items: flex-start;
-    /* background: linear-gradient(0deg, color(display-p3 0 0.5167 1) 0%, color(display-p3 0 0.5167 1) 100%), linear-gradient(0deg, color(display-p3 0.9087 0.3451 0.3451) 0%, color(display-p3 0.9087 0.3451 0.3451) 100%), linear-gradient(0deg, color(display-p3 1 1 1 / 0.20) 0%, color(display-p3 1 1 1 / 0.20) 100%), linear-gradient(0deg, color(display-p3 0.0962 0.0962 0.0962 / 0.40) 0%, color(display-p3 0.0962 0.0962 0.0962 / 0.40) 100%), url(./jump.png) lightgray 50% / cover no-repeat, radial-gradient(119.04% 90.75% at 93.18% 5.93%, color(display-p3 1 1 1) 0%, color(display-p3 1 1 1 / 0.00) 100%), radial-gradient(235.62% 229.18% at -53.01% -72.73%, color(display-p3 0.3207 0.5101 0.7942) 0%, color(display-p3 0.1592 0.2532 0.3942) 100%); */
-    height: 100vh;
+    height: calc(100% - 8px);
+    z-index: 3;
 }
 
 .sidebar {
     display: flex;
-    padding: 15px 30px;
+    padding: 40px 30px;
     background: color(display-p3 0 0 0 / 0.00);
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
     align-self: stretch;
-    backdrop-filter: blur(0px);
+    width: 360px;
+    box-sizing: border-box;
+    z-index: 3;
+    overflow-y: scroll;
 }
 
-.main-content {
+#content {
     display: flex;
     padding: 80px;
     flex-direction: column;
@@ -56,6 +86,20 @@ body {
     gap: 20px;
     flex: 1 0 0;
     align-self: stretch;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.scroll {
+    height: 100%;
+    width: 100%;
+    justify-content: start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: -80px;
+    padding: 80px;
 }
 
 .logo {
@@ -64,6 +108,13 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    transition: filter 3s;
+
+    &:hover {
+
+        filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+
+    }
 }
 
 .title {
@@ -71,12 +122,14 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    color: #fff;
     color: color(display-p3 1 1 1);
     font-family: "Atkinson Hyperlegible";
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin: 0px;
 }
 
 nav {
@@ -92,6 +145,7 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    color: #fff;
     color: color(display-p3 1 1 1 / 0.25);
     font-family: "Atkinson Hyperlegible";
     font-size: 32px;
@@ -99,44 +153,149 @@ nav {
     font-weight: 400;
     line-height: normal;
     text-decoration: none;
-    transition: all 0.3s;
+    border-radius: 10px;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        padding 0.3s ease,
+        gap 0.3s ease,
+        filter 0.3s ease,
+        font-size 0.3s ease,
+        border-radius 0.3s ease;
 
-    .icon {
+
+    nf {
         display: none;
         opacity: 0;
+        width: 0px;
+        transition: all 0.3s;
+    }
+
+    nf.subtle {
+        display: block !important;
+        font-size: 16px;
+        margin-left: -8px;
+
     }
 
     &:hover {
         padding: 10px 20px;
+        color:#fff;
         color: color(display-p3 1 1 1 / 1);
+        filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+
+        nf.subtle {
+            display: block !important;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.25);
+            opacity: 1;
+            width: auto;
+            margin-left: 4px;
+        }
     }
 
     &:active {
-        font-weight: 700;
+        scale: 0.9;
+    }
+
+    &:focus-visible {
+        padding: 10px 20px;
+        color: #fff;
+        color: color(display-p3 1 1 1 / 1);
+        filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+        outline: 2px solid rgba(255, 255, 255, 0.5);
+
+        nf.subtle {
+            display: block !important;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.25);
+            opacity: 1;
+            width: auto;
+            margin-left: 4px;
+        }
     }
 }
 
 .nav-item.selected {
     display: flex;
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 15px;
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
-    backdrop-filter: blur(5px);
+    color: #fff;
     color: color(display-p3 1 1 1);
     font-family: "Atkinson Hyperlegible";
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    pointer-events: none;
 
-    .icon {
+    nf {
         display: block;
         opacity: 1;
+        width: auto;
     }
 }
 
+@media screen and (width < 550px) {
+    nav {
+        margin: 0px 0px 0px -60px;
+        padding-right: 10px;
+        padding-left: 75vw;
+        width: 100vw;
+        max-width: calc(100vw - 10px);
+        flex-direction: row;
+        overflow-x: scroll;
+        box-sizing: border-box;
+        align-items: center;
+        height: 60px;
+    }
+
+    .logo {
+        padding: 0px 0px 20px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .nav-item {
+        font-size: 24px;
+        padding: 10px !important;
+
+        nf {
+            scale: 0.8;
+        }
+    }
+
+    .nav-item.selected {
+        font-size: 32px;
+    }
+
+    body {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .sidebar {
+        gap: 0px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    #content {
+        padding-top: 0px;
+    }
+
+    .scroll {
+        margin: -80px;
+        padding: 20px;
+        width: calc(100% + 110px);
+    }
+}
 
 
 
@@ -167,4 +326,59 @@ p {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+
+/* .gamepad-selected {
+    padding: 10px 20px;
+    color: color(display-p3 1 1 1 / 1);
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+
+    nf.subtle {
+        display: block !important;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.25);
+        opacity: 1;
+    }
+} */
+
+.gamepad-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    padding: 100px;
+    align-content: baseline;
+    justify-content: end;
+    box-sizing: border-box;
+
+    p {
+        height: 32px;
+    }
+}
+
+.gamepad .gamepad-overlay {
+    display: flex !important;
+}
+
+
+button {
+    border-radius: 100px;
+    background: #FFF;
+    background: color(display-p3 1 1 1);
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+
+    &:focus-visible {
+
+        padding: 10px 20px;
+        color: black;
+        filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+        outline: 2px solid rgba(255, 255, 255, 0.5);
+
+    }
 }
